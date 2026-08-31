@@ -1,0 +1,77 @@
+\part{Some Language and Notation of Mathematics}
+
+\section{August 31st: Sets}
+
+\begin{defbox}
+   A \textbf{set} is a collection of elements.
+\end{defbox}
+
+Intuitively, a set can be thought of as a bag---our set---which may or not contain items---our elements. Sets are the most fundamental objects in mathematics and many important concepts, such as functions and spaces, can be defined using sets.
+
+If we want to say that an element $x$ belongs to some set $S$, we write
+\[x \in S\]
+with the ``$\in$" symbol meaning ``an element of" (so $x \in S$ literally means $x$ is an element of $S$). 
+
+When defining a set, we use curly braces ``$\{\}$" to enclose the elements inside of it. Here are some ways to define sets:
+
+\begin{enumerate}
+   \item $A := \{0, 3, \heartsuit\}$ assigns a set, named $A$, to the elements $0$, $3$, and $\heartsuit$ (elements do not necessarily need to be numbers, indeed another set can also be an element!) 
+   \item $B := \{\text{all odd integers}\}$ assigns a set, named $B$, to all odd integers (e.g. $-1 \in B$ and $127 \in B$).
+   \item $C := \{n \colon n \text{ is an integer satisfying } n^3 = n\}$ (the colon ``$\colon$" in between the curly braces stands for ``such that," so $C$ is the set of all integers $n$ such that $n^3 = n$ (equivalently, $C := \{-1, 0, 1\}$ 
+   \item The standard sets:
+     \begin{flalign*}
+         & \NN\footnotemark := \{0, 1, 2, 3, \dots\} \text{  (the set of natural numbers)} & \\
+         & \ZZ := \{\dots, -2, -1, 0, 1, 2, \dots\} \text{  (the set of integers)} & \\
+         & \QQ := \left\{\displaystyle\frac{a}{b} \colon a, b \in \ZZ, b \neq 0\right\} \text{  (the set of rational numbers)} & \\
+         & \RR := \text{the set of real numbers}\footnotemark & \\
+         & \CC := \{a + bi \colon a, b \in \RR\} \text{  (the set of complex numbers)} 
+      \end{flalign*} 
+\end{enumerate}
+\footnotetext{Some sources omit zero from the natural numbers. In this class we will always start at zero.}
+\footnotetext{The set of real numbers is surprisingly hard to define. See MATH255 for a rigorous definition.}
+
+\begin{remark}
+   Order and repetition in sets do not matter. Indeed, the set $A := \{0, 3, \heartsuit\}$ is equivalent to the sets $A_1 := \{3, \heartsuit, 0\}$ and $A_2 := \{0, 3, \heartsuit, 0\}$.
+\end{remark}
+
+\begin{thmbox}
+   Two sets $A$ and $B$ are said to be equal if and only if they have the same elements.
+
+   Symbolically, we write $A = B \iff \forall x, x \in A \text{ when } x \in B$.
+\end{thmbox}
+
+In the above theorem, we introduced two key symbols often used in mathematics. The first, the ``$\iff$" symbol, stands for ``if and only if." In mathematics, this means that the statement on the left is equivalent to the statement on the right. The second symbol, the  ``$\forall$", stands for ``for all" or ``for every" and is called the \textbf{universal quantifier}. Symbolic notation is often eschewed in formal writing but is used very often in more casual mathematical writing.
+
+\vspace{0.2cm}
+
+\begin{remark}
+  By Theorem 1.0.3, we see that the set $A$ in Remark 1.0.2 is equivalent to the sets $A_1$ and $A_2$. 
+\end{remark}
+
+\begin{defbox}
+   Let $A$ and $B$ be arbitrary sets. We say that $A$ \textbf{is a subset of} $B$, or $A$ \textbf{is contained in} $B$, if for every $x \in A$, $x \in B$. In this case we write, $A \subseteq B$. 
+\end{defbox}
+
+\vspace{0.2cm}
+
+\begin{remark} 
+   Note that $A = B$ holds when $A \subseteq B$ and $B \subseteq A$ both hold. This gives us a very useful way to prove if two sets are equal (we simply prove that one set is the subset of the other and vice-versa). 
+\end{remark}
+
+\begin{defbox}
+   We call the set with no elements, or the set $\emptyset := \{\}$ to be the \textbf{empty set}.
+\end{defbox}
+
+Intuitively, the empty set can be thought of as a bag with nothing inside of it. The empty set is not nothing, but it contains nothing.
+
+\begin{example}
+   We conclude with some examples of sets and some of their important properties:
+   \begin{enumerate}
+      \item For every set $A$, $\emptyset \subseteq A$.
+   \item $\emptyset \neq \{\emptyset\}$, indeed we see that $\emptyset \subseteq \{\emptyset\}$ but $\{\emptyset\} \not\subseteq \emptyset$. 
+   \item $\{\emptyset, \{\emptyset\}\} \neq \{\{\emptyset\}\}$
+   \item In set theory, we write the numbers $0 := \emptyset$, $1 := \{0\}$, $2 := \{0,1\}$, and so on.
+   \end{enumerate}
+\end{example}
+
+

@@ -1,0 +1,2 @@
+\contentsline {part}{I\hspace {1em}Some Language and Notation of Mathematics}{2}{part.1}%
+\contentsline {section}{\numberline {1}August 31st: Sets}{2}{section.1}%
