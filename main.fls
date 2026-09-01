@@ -1,4 +1,4 @@
-PWD /Users/kiari2/Documents/schoolwork/MATH245/notes
+PWD /Users/kiari2/Documents/schoolwork/1 MATH245/notes/MATH245 Notes Fall 2026
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -526,6 +526,20 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/libertine/LinLibertineT
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-ot1--base.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-ot1.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-ot1--base.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/newtx/nxlmia.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/LibertineMathRM.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txmiaSTbb.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/newtx/ntxsy.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/newtx/nxlmi.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/LibertineMathMI.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

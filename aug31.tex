@@ -17,18 +17,18 @@ When defining a set, we use curly braces ``$\{\}$" to enclose the elements insid
 \begin{enumerate}
    \item $A := \{0, 3, \heartsuit\}$ assigns a set, named $A$, to the elements $0$, $3$, and $\heartsuit$ (elements do not necessarily need to be numbers, indeed another set can also be an element!) 
    \item $B := \{\text{all odd integers}\}$ assigns a set, named $B$, to all odd integers (e.g. $-1 \in B$ and $127 \in B$).
-   \item $C := \{n \colon n \text{ is an integer satisfying } n^3 = n\}$ (the colon ``$\colon$" in between the curly braces stands for ``such that," so $C$ is the set of all integers $n$ such that $n^3 = n$ (equivalently, $C := \{-1, 0, 1\}$ 
+   \item $C := \{n \colon n \text{ is an integer satisfying } n^3 = n\}$ (the colon ``$\colon$" in between the curly braces stands for ``such that," so $C$ is the set of all integers $n$ such that $n^3 = n$ (equivalently, $C := \{-1, 0, 1\}$))
    \item The standard sets:
      \begin{flalign*}
-         & \NN\footnotemark := \{0, 1, 2, 3, \dots\} \text{  (the set of natural numbers)} & \\
+         & \NN= \{0\footnotemark[1], 1, 2, 3, \dots\} \text{  (the set of natural numbers)} & \\
          & \ZZ := \{\dots, -2, -1, 0, 1, 2, \dots\} \text{  (the set of integers)} & \\
          & \QQ := \left\{\displaystyle\frac{a}{b} \colon a, b \in \ZZ, b \neq 0\right\} \text{  (the set of rational numbers)} & \\
-         & \RR := \text{the set of real numbers}\footnotemark & \\
+         & \RR := \text{the set of real numbers}\footnotemark[2] & \\
          & \CC := \{a + bi \colon a, b \in \RR\} \text{  (the set of complex numbers)} 
       \end{flalign*} 
 \end{enumerate}
-\footnotetext{Some sources omit zero from the natural numbers. In this class we will always start at zero.}
-\footnotetext{The set of real numbers is surprisingly hard to define. See MATH255 for a rigorous definition.}
+\footnotetext[1]{Some sources omit $0$ from the set of natural numbers, and define $\NN := \{1, 2, 3, \dots\}$. However in this class, we will always assume $0 \in \NN$, and define $\NN^+ := \{1, 2, 3, \dots\}$.}
+\footnotetext[2]{The set of real numbers is surprisingly difficult to define. Take MATH255 to learn how to rigorously define $\RR$.}
 
 \begin{remark}
    Order and repetition in sets do not matter. Indeed, the set $A := \{0, 3, \heartsuit\}$ is equivalent to the sets $A_1 := \{3, \heartsuit, 0\}$ and $A_2 := \{0, 3, \heartsuit, 0\}$.
