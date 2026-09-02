@@ -1,5 +1,5 @@
 \contentsline {part}{I\hspace {1em}Some Language and Notation of Mathematics}{2}{part.1}%
 \contentsline {section}{\numberline {1}August 31st: Sets}{2}{section.1}%
-\contentsline {section}{\numberline {2}September 2: Set Operations}{4}{section.2}%
+\contentsline {section}{\numberline {2}September 2nd: Set Operations}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Basic Set Operations}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Algebra of Set Operations}{5}{subsection.2.2}%

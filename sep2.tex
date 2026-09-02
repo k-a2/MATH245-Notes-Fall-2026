@@ -1,4 +1,4 @@
-\section{September 2: Set Operations}
+\section{September 2nd: Set Operations}
 
 \subsection{Basic Set Operations}
 
@@ -11,14 +11,14 @@
    \end{itemize}
 \end{defbox}
 
-If $A$ is the ambient set (say for instance, $A = \ZZ$, then when $B \subseteq A$ we sometimes write $B^c := A \setminus B$ and call it the \textbf{complement} of $B$ within $A$.
+If $A$ is the ambient set (say for instance, $A = \ZZ$, then when $B \subseteq A$ we sometimes write $B^c := A \setminus B$ and call it the \textbf{complement} of $B$ relative to $A$.
 
 \begin{example}
    Within $\ZZ$, define $A := \{n \in \ZZ \colon n \text{ is even}\}$. We have that the complement of $A$, $A^c := \{ \text{set of odd integers}\}$. 
 \end{example}
 
 \begin{defbox}
-   For two elements $a$ and $b$ ($a$ and $b$ are not necessarily sets), we define their \bold{ordered pair}, denoted $(a,b)$ to be the tuple satisfying the property $(a,b) \neq (b,a)$, unless of course $a = b$. 
+   For two elements $a$ and $b$ ($a$ and $b$ are not necessarily sets), we define their \bold{ordered pair}, denoted $(a,b)$ to be the tuple satisfying the property $(a,b) \neq (b,a)$ whenever $a \neq b$. 
 \end{defbox}
 
 We will use this notion of ordered pairs to help us with the following important definition:
@@ -42,12 +42,12 @@ A notable cartesian product is the Euclidean plane $\RR^2 := \RR \times \RR$. Yo
 \end{defbox}
 
 \begin{example}
-   Let $A := {0, 1, 2}$, then its power set $\mathscr{P}(A)$ is: 
+   Let $A := \{0, 1, 2\}$, then its power set $\mathscr{P}(A)$ is: 
    \[ \mathscr{P}(A) := \{\emptyset, \{0\}, \{1\}, \{2\}, \{0, 1\}, \{0, 2\}, \{1, 2\}, \{0, 1, 2\}\} \]
 \end{example}
 
 \begin{remark}
-   For each element in a nonempty set, we can either choose to include or not include it in a subset of $A$. This means that for a set $A$, there are $2^n$ elements in its power set. 
+   For each element in a nonempty set, we can either choose to include or not include it in a subset of $A$. This means that for a set $A$ with $n$ elements, there are $2^n$ elements in its power set. 
 \end{remark}
 
 \subsection{Algebra of Set Operations}
