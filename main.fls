@@ -559,6 +559,11 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/newtx/nxlmi.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/LibertineMathMI.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT ./sep4.tex
+INPUT ./sep4.tex
+INPUT ./sep4.tex
+INPUT ./sep4.tex
+INPUT sep4.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
@@ -567,6 +572,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBiolinu
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/stxscr.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb

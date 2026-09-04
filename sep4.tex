@@ -1,0 +1,65 @@
+\section{September 4th: Proof by Contradiction, Contrapositive, and Induction}
+
+\subsection{Proof by Contradiction}
+
+When we are asked to prove a statement $P$, we can prove $P$ by assuming that $P$ is false (i.e $\neg P$---the "$\neg$" symbol means "not"---is true) and then showing that $\neg P$ cannot be true. This is called a \textbf{proof by contradiction.}
+
+\begin{propbox}
+   $\sqrt{2} \notin \QQ$.
+\end{propbox}
+
+\begin{proof}
+   Let us assume, by contradiction, that the negation of the proposition is true, i.e. we assume that $\sqrt{2} \in \QQ$. Then, we can write $\sqrt{2} = p/q$, where $p$ and $q$ are two integers that are irreducible. Then $2 = p^2/q^2$ and $2q^2 = p^2$. Since $p^2$ is the product of $2$ and $q^2$, then $p^2$ is even, which immediately implies $p$ is even. Since $p$ is even, it can be written as $p = 2k$ where $k \in \ZZ$. Squaring both sides yields $p^2 = 4k^2$. Let $2q^2 = 4k^2$ and so $q^2 = 2k^2$, so $q^2$ is even which implies $q^2$ is also even. But we assumed that $p$ and $q$ are irreducible. Contradiction.  
+\end{proof}
+
+\subsection{Proof by Contrapositive}
+
+Suppose we are trying to prove a statement $P \implies Q$, i.e. if $P$ is true, then $Q$ is true as well. This statement is logically equivalent to
+\[ \neg Q \implies \neg P \]
+which is the \textbf{contrapositive} of $P \implies Q$. It is often easier to prove the contrapositive of the statement rather than proving the statement directly.
+
+\begin{lemmabox}
+   Let $a, b \in \ZZ$. If $ab$ is even, then $a$ or $b$ are even.
+\end{lemmabox}
+\begin{proof}
+   Let us prove the contrapositive of the statement: if both $a$ and $b$ are odd, then $ab$ is odd. Assume $a$ and $b$ are even, then $a := 2k + 1$ and $b := 2l + 1$ for $k, l \in \ZZ$. We write $ab = (2k + 1)(2l + 1) = 4kl + 2k + 2l + 1= 2(2kl + k + l) + 1$. Let $m := 2kl + k + l$, so $ab = 2m + 1$ and so $ab$ is odd. 
+\end{proof}
+
+\subsection{Proof by Induction}
+
+A key property of the natural numbers is that they are well ordered, namely every nonempty subset $S \subseteq \NN$ has a unique least element $n_0$ (i.e. every element in $S$ is less than or equal to $n_0$. This property is known as the \textbf{axiom of well-orderedness}.
+
+\begin{thmbox}[Principle of Induction]
+   Let $P \subseteq \NN$. Suppose the following statements are true:
+   \begin{enumerate}
+      \item The base case: for $n_0 \in \NN$, $n_0 \in P$.
+      \item The inductive step: for all $n \in \NN$, if $n \in P$, then $n + 1 \in P$.
+   \end{enumerate}
+   Then $P \supseteq \{n \in \NN \colon n \geq n_0\}$.
+\end{thmbox}
+
+\begin{proof}
+   By contradiction, suppose that $P \not\supseteq \{n \in \NN \colon n \geq n_0\}$. Then the set $S := \{n \in \NN \colon n \geq 0 \text{ and } n \notin P\} \neq \emptyset$. Let $s_0$ be the least element in $S$ by the well-ordered axiom. We have that $s_0 \neq n_0$ since $n_0 \in P$. Thus $s_0 > n_0$ and $s_0 - 1 \geq n_0$. Since $s_0$ is a least element of $S$, $s_0 - 1 \notin S$ hence $s_0 - 1 \in P$. But by condition (2) $s_0 \in P$. Contradiction.
+\end{proof}
+   
+
+\begin{example}
+   We claim, for any $n \in \NN$:
+   \[ 1 + 2 + \dots + n = \frac{n(n+1)}{2} \]
+\end{example}
+\begin{proof}
+   We will proceed by induction. We first consider the base case $n = 0$:
+   \[ 0 = \frac{0(1)}{2} = 0 \]
+   Now, let us assume that the condition holds for every $n \in \NN$. We want to show the condition holds for $n + 1$. We now want to prove:
+   \[ 1 + 2 + \dots + n + (n + 1) = \frac{(n+1)(n+2)}{2} \]
+   By the inductive hypothesis, let us write $1 + 2 + \dots + n = n(n+1)/2$. By simple manipulations, we see that:
+   \begin{align*}
+      \frac{n(n+1)}{2} + (n+1) &= \frac{(n+1)(n+2)}{2} \\
+      \frac{n(n+1) + 2(n+1)}{2} &= \frac{(n+1)(n+2)}{2} \\
+     \frac{(n+1)(n+2)}{2}        &= \frac{(n+1)(n+2)}{2} \qedhere
+  \end{align*}
+\end{proof}
+
+
+
+

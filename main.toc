@@ -3,3 +3,7 @@
 \contentsline {section}{\numberline {2}September 2nd: Set Operations}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Basic Set Operations}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Algebra of Set Operations}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}September 4th: Proof by Contradiction, Contrapositive, and Induction}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Proof by Contradiction}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Proof by Contrapositive}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Proof by Induction}{7}{subsection.3.3}%
