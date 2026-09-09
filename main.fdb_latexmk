@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1788552775.75718 "main.tex" "main.pdf" "main" 1788552778.11863 0
+["pdflatex"] 1788985441.25828 "main.tex" "main.pdf" "main" 1788985443.68398 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc" 1490131464 2835 bfce207f80837ef8737b6a788d8bc760 ""
@@ -52,6 +52,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb" 1354061736 538965 19c5c8b7f952ac97afb8565e9c21a82d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb" 1354061736 490980 e27f1e217a0902faea22205f197918d4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb" 1569879884 35829 268d1d114c9114e541f92817aec4230d ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/LibertineMathRM.pfb" 1569879884 17941 ddba6afdead1586dc42d18763749eddd ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb" 1572128992 32409 1452fa0ce4fabfb48acd5d077e296f6d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/stxscr.pfb" 1569879884 77528 91dab0df394911709956637eb6c0fe2a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb" 1621283831 33424 f912ebe54685d0a65d3c046e3d517e38 ""
@@ -278,14 +279,15 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1740076622.12528 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740076572 8221430 a23cd5bc61ef5b28299cf12b0437b99e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "aug31.tex" 1788222636.15559 4534 722cba776e4c05575725f1f8bdbc9bdf ""
-  "kian.sty" 1788374532.28329 814 ab78d85eae77302d8548ba6d7ff2ed6a ""
-  "main.aux" 1788552777.87094 1342 60b66f978533291ae333533eadcec1db "pdflatex"
-  "main.out" 1788552777.87469 1884 9c3564f0c9b2f685dd0711cceae4ac9b "pdflatex"
-  "main.tex" 1788547820.82 2098 b2627fc8861e89e05a9efbc16bb381a6 ""
-  "main.toc" 1788552777.87513 810 0b4a71b70c2a13726e58121762a05e22 "pdflatex"
+  "aug31.tex" 1788559391.40385 4536 f85a659bfde5f00951da129e509795f7 ""
+  "kian.sty" 1788978411.43881 827 6e4a17f45568ff883cfd4077e81262b6 ""
+  "main.aux" 1788985443.4328 1878 f6c60d1a041b8b6886249d301d13be4a "pdflatex"
+  "main.out" 1788985443.43656 2720 1aaecd07e84891058a4597a844178828 "pdflatex"
+  "main.tex" 1788977761.55504 2111 cb884530224caa122b3d06ffe26449d2 ""
+  "main.toc" 1788985443.43702 1181 b5035ee66af9498be3ab6bbe6539edf1 "pdflatex"
   "sep2.tex" 1788394951.47052 9996 0f406b24db4d675953e3d7fa747cfdfa ""
-  "sep4.tex" 1788552774.15382 3836 deb1637394ed314ca71e7a94186ff870 ""
+  "sep4.tex" 1788552792.77542 3836 deb1637394ed314ca71e7a94186ff870 ""
+  "sep9.tex" 1788985439.34793 4166 ae2305d63e4a4d9f90c63f9a502ec2df ""
   (generated)
   "main.aux"
   "main.log"

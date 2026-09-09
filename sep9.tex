@@ -1,0 +1,73 @@
+\section{September 9th: Complete Induction, Pigeonhole Principle, Functions}
+
+\subsection{Complete Induction}
+
+\begin{thmbox}[Complete Induction]
+   Let $n_0 \in \NN$ and $P \subseteq \NN$ satisfying that for each $n \geq n_0$, if $\{n_0, n_0 + 1, \dots, n - 1\} \subseteq P$, then $n \in P$. Then $P \supseteq \{n_0, n_0 + 1, \dots \} = \{n \in \NN \colon n \geq n_0\}$. 
+\end{thmbox}
+
+Complete induction is often known as \textbf{"strong induction"}, while Theorem 3.3.3 is often known as \textbf{"weak induction"}. 
+
+\begin{proof}
+   Left as an exercise.
+\end{proof}
+
+\subsection{The Pigeonhole Principle}
+
+The Pigeonhole Principle is a powerful consequence of the well-ordered axiom which states that if there are $n$ pigeons and $m$ pigeonholes, where $n \geq m$, then at least one pigeonhole has two or more pigeons in it.
+
+\begin{propbox}
+   Let $a_1, a_2, \dots a_5 \in \ZZ$. If we divide all integers by 4, then there are two among them with the same remainder.
+\end{propbox}
+\begin{proof}
+   The possible remainders are $\{0, 1, 2, 3\}$. Since there are 5 integers that can have 4 different remainders, we invoke the pigeonhole principle to show that at least two among $a_1, \dots a_5$ with the same remainder. 
+\end{proof}
+
+\begin{propbox}
+   For any group of greater than 2 people, there are two different people who have the same number of friends.
+\end{propbox}
+\begin{proof}
+   Left as an exercise. 
+\end{proof}
+
+\subsection{Functions}
+
+Intuitively, we can think of functions as mapping elements from one set to a unique element in another. More formally:
+
+\begin{defbox}
+   A \textbf{function} from a set $X$ to a set $Y$, denoted $f \colon X \to Y$, is a subset $f \subseteq X \times Y$ satisfying that for each $x \in X$, there exists a unique $y \in Y$ such that the ordered pair $(x, y) \in f$. If this is the case we write $f(x) = y$. The set $X$ is called the \textbf{domain} of $f$ while the set $Y$ is called the \textbf{codomain} of $f$.
+\end{defbox}
+
+\begin{example}
+   The simplest function is called the \textbf{identity function}, which simply sends each element of a set $X$ to itself. It can be written as $1_A \colon A \to A$, where $1_A(x) = x$ for all $x \in A$. 
+\end{example}
+
+\begin{defbox}
+   Let $f \colon X \to Y$ be a function. The \textbf{graph} of a $f$, often denoted $\Gamma_f$ or simply $\Gamma$, is defined by set $\{(x, f(x)) \in X \times Y \colon f(x) = y\}$.
+\end{defbox}
+
+\begin{example}
+   Consider the function $f \colon \RR \to \RR$ given by $f(x) := x^2$. Consider as well the function $g \colon \RR \to [0, \infty)$ given by $g(x) := x^2$. We have that $\Gamma_f = \Gamma_g$, but $f$ and $g$ are technically two different functions. However, $f \equiv g$. 
+\end{example}
+
+\begin{defbox}
+   For a function $f \colon X \to Y$ and $A \subseteq X$, $B \subseteq Y$:
+   \begin{enumerate}
+      \item For $a \in A$, we define the \textbf{image of $A$ under $f$}, denoted $f(A) := \{f(a) \colon a \in A\}$. 
+      \item For $x \in X$, we define the \textbf{preimage of $B$}, denoted $f^{-1}(B) := \{x \in X \colon f(x) \in B\}$. 
+   \end{enumerate}
+\end{defbox}
+
+\begin{remark}
+   For $f \colon X \to Y$, $A \subseteq X$ and $B \subseteq Y$, $f^{-1}(f(A)) \supseteq A$, but $f^{-1}(f(A)) \neq A$. Indeed, if we consider the function $f \colon \ZZ \to \ZZ$ given by $f(n) := n^2$, then $f(\NN) = \{0, 1, 4, 9, \dots\}$ but $f^{-1}(f(\NN)) = \ZZ$. 
+   Similarily, $B \supseteq f(f^{-1}(B))$ but $f(f^{-1}(B)) \neq B$. Indeed, for $f$ given as above, $f^{1}(\ZZ) = \ZZ$, but $f(f^{-1}(\ZZ)) = f(\ZZ) = \{0, 1, 4, 9, \dots\}$. 
+\end{remark}
+
+\begin{defbox}
+   Let $f \colon X \to Y$ be a function.
+   \begin{enumerate}
+      \item We say $f$ is \textbf{injective} or \textbf{one-to-one} if for every $y \in Y$, there exists one and only on $x \in X$ such that $f(x) = y$. In other words, for all $x, x_0 \in X$, $f(x) = f(x_0) \implies x = x_0$.
+      \item We say $f$ is \textbf{surjective} or \textbf{onto} if for all $y \in Y$, there exists $x \in X$ such that $f(x) = y$. In other words $f(X) = Y$.
+      \item We say $f$ is \textbf{bijective} if it is both injective and surjective.
+   \end{enumerate}
+\end{defbox}
