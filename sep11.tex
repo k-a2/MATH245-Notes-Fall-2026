@@ -1,0 +1,54 @@
+\section{September 11th: Compositions of Functions}
+
+\subsection{Compositions of functions}
+
+\begin{defbox}
+   Let $f \colon X \to Y$ and $g \colon Y \to Z$. The \textbf{composition of $f$ and $g$}, denoted $g \circ f \colon X \to Z$, is the function denoted by $g \circ f := g(f(x))$. 
+\end{defbox}
+
+\begin{example}
+   For $f \colon \NN \to \NN$, $n \mapsto n + 1$ and $g \colon \NN \to \NN$, $n \mapsto n^2$, then $g \circ f := g(f(n)) = g(n+1) = (n+1)^2$, and $f \circ g := f(g(n)) = f(n^2) = n^2 + 1$. 
+\end{example} 
+
+\begin{defbox}
+   We say the function $\text{1}_X \colon X \to X$, $x \mapsto x$ is the \textbf{identity function}.
+\end{defbox}
+
+\begin{defbox}
+   Let $f \colon X \to Y$. Call $g \colon Y \to X$ the \textbf{right inverse of $f$} if $f \circ g = \text{1}_X$ and the \textbf{left inverse of $f$} if $g \circ f = \text{1}_X$. Additionally $g$ is the \textbf{inverse of $f$} if it is both the left and right inverse of $f$.  
+\end{defbox}
+
+\begin{remark}
+   A composition of functions is associative, that is, if $f \colon X \to Y$, $g \colon Y \to Z$, $h \colon Z \to W$, then $h \circ (g \circ f) = (h \circ g) \circ f$. 
+\end{remark}
+
+\begin{propbox}
+   For $f \colon X \to Y$, if $g_l \colon Y \to X$ is a left inverse and $g_r \colon Y \to X$ is a right inverse, then $g_l \equiv g_r$ and thus is a two-sided inverse.
+\end{propbox}
+
+\begin{proof}
+   We can write $g_l = g_l \circ \text{1}_Y = g \circ (f \circ g_r) = (g_l \circ f) \circ g_r = \text{1}_X \circ g_r = g_r$. 
+\end{proof}
+
+\begin{propbox}
+   Let $f \colon X \to Y$, where $X \neq \emptyset$. 
+   \begin{enumerate}
+      \item $f$ admits an inverse if and only if $f$ is bijective.
+      \item $f$ admits a left inverse if and only if $f$ is injective.
+      \item $f$ admits a right inverse if and only if $f$ is surjective.
+   \end{enumerate}
+\end{propbox}
+
+\begin{propbox}
+   If $f \colon X \to Y$ has an inverse, then it is unique and we denote it by $f^{-1} \colon Y \to X$. 
+\end{propbox}
+
+\subsection{Binary Relations and Equivalence Relations}
+
+\begin{defbox}
+   A \textbf{binary relation} on a set is a an arbitrary subset of $X \times X$. 
+\end{defbox}
+
+\begin{example}
+  A 
+\end{example}
