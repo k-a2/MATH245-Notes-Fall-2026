@@ -49,4 +49,30 @@ Let $t \in \NN$ such that $r_{t + 1} = 0$. Then $r_t = \gcd(a,b)$
 \end{example}
 \begin{solution}
    We write:
+   \begin{align*}
+      111 &= 2 \cdot 51 + 9 \\
+      51 &= 5 \cdot 9 + 6 \\
+      9 &= 1 \cdot 6 + 3 \\
+      6 = 2 \cdot \mathbf{3} + 0
+   \end{align*}
+   Hence $\gcd(111,51) = 3$. We can also use this algorithm to write $3$ as a linear combination of $111$ and $51$ (in the form $3 = ua + vb$ using backwards substitution as follows:
+   \begin{align*}
+      3 &= 9 - 6 \\
+        &= 9 - 51 + 9 \cdot 5 \\
+        &= 9 \cdot 6 - 51 \\
+        &= 6 \cdot 111 - 2 \cdot 51 \cdot 6 - 51 \\
+        &= 6 \cdot 111 - 11 \cdot 51 \qedhere
+   \end{align*}
 \end{solution}
+
+We can prove that the Euclidean algorithm returns $\gcd(a,b)$ by using recursion. Write:
+\[ \text{Euc}(a,b) := \begin{cases} b \text{ if } b \mid a \\ \text{Euc}(b, \text{rem}(a,b)) \text{ otherwise}
+\end{cases}\]
+where $\text{rem}(a,b)$ is the remainder of $a$ and $b$. It suffices to prove the following lemma:
+
+\begin{lemmabox}
+   For $a$, $b \in \NN^+$, with $a \geq b$, $\gcd(a,b) = \gcd(b, \text{rem}(a,b))$. 
+\end{lemmabox}
+\begin{proof}
+   Let $r := \text{rem}(a,b)$, so $a = bq + r$ for some $q \in \ZZ$. Then $\gcd(b,r) \mid a$ because $a$ is an integer combination of $b$ and $r$. Since we also have $\gcd(b,r) \mid b$, we get $\gcd(b, r) \mid \gcd(a, b)$. Similarily, since $r = a - bq$, $\gcd(a,b) \mid r$. Since $\gcd(a,b) \mid b$ we finally get $\gcd(a,b) \mid \gcd(b,r)$.  
+\end{proof}
