@@ -37,6 +37,14 @@
     fonttitle = \bfseries
 }
 
+\newtcolorbox{corrbox}{
+    code={\refstepcounter{mycounter}},
+    title={Corrolary \themycounter},
+    colframe = green!70,
+    colback  = green!10,
+    fonttitle = \bfseries
+}
+
 \newtcolorbox{warning}
 {
     title={Warning},
@@ -107,4 +115,5 @@
 \input{sep11}
 \input{sep14}
 \input{sep16}
+\input{sep18}
 \end{document}

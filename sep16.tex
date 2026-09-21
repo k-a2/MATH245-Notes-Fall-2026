@@ -43,3 +43,10 @@ The proofs of each of these statements are very easy by definition.
    \end{align*}
    which contradicts that $0 \leq r' < |b|$.
 \end{proof}
+
+\begin{corrbox}
+   Let $a$, $b \in \ZZ$ and $b \neq 0$. Then $b \mid a$ if and only if the remainder of $a$ and $b = 0$. 
+\end{corrbox}
+\begin{proof}
+  For the forwards direction, assume $b \mid a$, then we havee $a = bq$ for some $q \in \ZZ$, thus $a = bq + 0$, so by the uniqueness of such a representation, the remainder is 0. Conversely, suppose the remainder is zero, then for $a = bq + r$, if $r = 0$, $a = bq$ which immediately implies $b \mid a$.  
+\end{proof}
