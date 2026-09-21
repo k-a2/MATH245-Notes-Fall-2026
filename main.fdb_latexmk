@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1789150093.97054 "main.tex" "main.pdf" "main" 1789150096.53624 0
+["pdflatex"] 1789951935.27201 "main.tex" "main.pdf" "main" 1789951937.73335 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc" 1490131464 2835 bfce207f80837ef8737b6a788d8bc760 ""
@@ -280,12 +280,13 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740076572 8221430 a23cd5bc61ef5b28299cf12b0437b99e ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "aug31.tex" 1788559391.40385 4536 f85a659bfde5f00951da129e509795f7 ""
-  "kian.sty" 1788978411.43881 827 6e4a17f45568ff883cfd4077e81262b6 ""
-  "main.aux" 1789150096.28596 2300 e5dec5773b0a83e10bcc9180723180a0 "pdflatex"
-  "main.out" 1789150096.28963 3456 8807f9e0cdeb54db41d7a72120b1fd17 "pdflatex"
-  "main.tex" 1789148492.63275 2125 e3de00de39325308f700eca4d24d48e0 ""
-  "main.toc" 1789150096.2902 1480 8f55e6a555a02bf0b41cc4b86a45c382 "pdflatex"
-  "sep11.tex" 1789150091.17515 2185 90ce8c7b05b512d54ff55253fb5b3fd5 ""
+  "kian.sty" 1789951930.36096 861 63fa09de4c2d1e2ca1d086f2fc03238d ""
+  "main.aux" 1789951937.48229 2833 662a1df0f88414d6385e7a92e1bb3b37 "pdflatex"
+  "main.out" 1789951937.48609 4274 282954e3751f9501937bd24481a1ae9a "pdflatex"
+  "main.tex" 1789407629.25966 2139 0e0fccf96fa9c4a57f234d73b69e5a31 ""
+  "main.toc" 1789951937.48663 1849 a273597f12902d10bc91463abf23968d "pdflatex"
+  "sep11.tex" 1789151121.88359 2186 9aadd3d24802182eef65f1578aabb773 ""
+  "sep14.tex" 1789951923.63389 4473 7b8f67c99b98e046a4a7f2d4594746af ""
   "sep2.tex" 1788394951.47052 9996 0f406b24db4d675953e3d7fa747cfdfa ""
   "sep4.tex" 1788552792.77542 3836 deb1637394ed314ca71e7a94186ff870 ""
   "sep9.tex" 1789149914.30778 4166 ae2305d63e4a4d9f90c63f9a502ec2df ""
