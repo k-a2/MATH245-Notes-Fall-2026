@@ -22,8 +22,24 @@ The proofs of each of these statements are very easy by definition.
 \begin{proof}
    We must show existence and uniqueness of $q$ and $r$ in this proof. We begin by showing that $q$ and $r$ exist. Define:
    \begin{align*}
-      S &:= \{r \in \NN \colon r =a - bq, q \in \ZZ\} \\
+      S :&= \{r \in \NN \colon r =a - bq, q \in \ZZ\} \\
         &=\{a - bq \colon q \in \ZZ, a - bq \geq 0\}
    \end{align*}
-   Then $S \subseteq \NN$ and $S \neq \emptyset$. Indeed, if $a \geq 0$, 
+   Then $S \subseteq \NN$ and $S \neq \emptyset$. Indeed, if $a \geq 0$, then taking $q := 0$ gives $a = a - bq \in S$, and if $a < 0$ then take $q := \pm a$ with sign chosen such that $-bq \geq 0$, then $a - bq = a + |b||a| \geq a + |a| \geq 0$, whence $a + bq \in S$.
+   By the well-ordering axiom of $\NN$ there exists a least element $r \in S$. Since $r \in S$, we have $r = a - bq$ for some $q \in \ZZ$ and $r \geq 0$, so it remains to show that $r < |b|$. If we suppose by contradiction that $r \geq |b|$, then $r - |b| \geq 0$ and:
+   \begin{align*}
+      r - |b| &= a - bq- |b| \\ 
+              &= a - bq - \sgn(b)\cdot b \\
+              &= a - b(q + \sgn(b) \in S
+   \end{align*}  
+   which contradicts $r$ being the least element in $S$.
+
+   We now show that $r$ and $q$ are unique. Suppose by contradiction, that $bq' + r = a = bq + r$ for some $q, q' \in \ZZ$ and $0 \leq r$, $r' < |b|$. Suppose without loss of generality that $r \geq r'$. Then $r - r' = bq' - bq = b(q' - q)$, so $b(q' - q) \geq 0$. If $q' - q = 0$ then $r - r' = 0$ and we are done. Otherwise, if $q' - q \neq 0$, then $|q' - q| \geq 1$ and so:
+   \begin{align*}
+      r &= r' + b(q' -q) \\
+        &= r' + |b||q' -q| \\
+        &\geq r' +|b| \\
+        &\geq |b|
+   \end{align*}
+   which contradicts that $0 \leq r' < |b|$.
 \end{proof}
