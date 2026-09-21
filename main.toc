@@ -22,3 +22,4 @@
 \contentsline {section}{\numberline {7}September 16th: Division}{13}{section.7}%
 \contentsline {section}{\numberline {8}September 18th: The GCD and The Euclidean Algorithm}{15}{section.8}%
 \contentsline {subsection}{\numberline {8.1}The GCD}{15}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}The Euclidean Algorithm}{16}{subsection.8.2}%

@@ -12,5 +12,41 @@
 \end{thmbox}
 Moreover, $d$ is the smallest positive integer of the form $d = ua + vb$. 
 \begin{proof}
-   We first prove $d = ua + vb$. Let $S := $.
+   We first prove $d = ua + vb$. Let $S := \{ma + nb \colon m, n \in \ZZ, ma + nb \geq 1 \}$. Note that $S \neq \emptyset$ because $a\sgn(a) + b\sgn(b) = |a| + |b| \geq 1$. By the well ordering property of $\NN$, there is a least element $ua + vb \in S$. In particular, define $D := ua + vb \geq 1$. Since $d \mid a$ and $d \mid b$, $d \mid D$, thus $d \leq D$. To show $D \leq d$, it suffices to show that $D \mid a$ and $D \mid b$ by the definition of the GCD. Write $a = Dq + r$ for $r \in [0, D)$, then we write:
+   \begin{align*}
+      r &= a - Dq \\
+        &= a - uqa = vqb \\
+        &= (1 - uq)a - vqb 
+   \end{align*}
+   But $r < D$ so if $r \neq 0$, then $r \in S$, which contradicts the choice of $D$. By the same argument, $D \mid b$ and $D \mid a$, so $D \leq d$ which implies $D = d$. 
+
+   Now let $d' \mid a$ and $d' \mid b$ for some $d' \in \ZZ^+$. Then $d' \mid d$ since $d = ua + vb$. 
 \end{proof}
+
+\begin{corrbox}
+   For $a$, $b$, $c \in \ZZ$, $a \neq 0$, if $a \mid bc$ and $\gcd(a,b) = 1$, then $a \mid c$.
+\end{corrbox}
+\begin{proof}
+   We have that $1 = ua + vb$ for some $u$, $v \in \ZZ$, then $c = uac + vbc$ so $a \mid c$ since $a \mid uac$ and $a \mid vbc$.
+\end{proof}
+
+\subsection{The Euclidean Algorithm}
+
+How do we find the GCD of two integers $a$ and $b$. One way is to brute force through all positive integers less than or equal to $\min(|a|, |b|)$, but this would take $\min(|a|, |b|)$ steps. A much more effective algorithm, which takes $\log_2 \min(|a|, |b|)$ steps, is known as the \textit{Euclidean Algorithm} and was discovered over 2300 years ago. 
+
+Here is how we use the Euclidean algorithm to find the GCD of two positive integers $a$, $b$ with $a \geq b$. We write:
+\begin{align*}
+   a &= bq_0 + r_0, &\; 0 < r_0 < b\\
+   b &= r_0q_1 + r_1, &\; 0 < r_1 < r_0 \\
+   r_0&= r_1q_2 + r_2 &\; 0 < r_2 < r_1 \\ 
+   \vdots \\ 
+   r_{t-1}&= r_tq_{t + 1} + r_{t+1}
+\end{align*}
+Let $t \in \NN$ such that $r_{t + 1} = 0$. Then $r_t = \gcd(a,b)$
+
+\begin{example}
+   Find $\gcd(111,51)$ using the Euclidean algorithm.
+\end{example}
+\begin{solution}
+   We write:
+\end{solution}
