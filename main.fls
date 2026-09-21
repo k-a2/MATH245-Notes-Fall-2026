@@ -587,6 +587,11 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/libertine/LinLibertine
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/newtx/ntxsy7.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
+INPUT ./sep16.tex
+INPUT ./sep16.tex
+INPUT ./sep16.tex
+INPUT ./sep16.tex
+INPUT sep16.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
