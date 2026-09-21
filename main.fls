@@ -651,6 +651,11 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntxexa.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/libertine/LinLibertineTZ-tlf-ot1.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/libertine/LinLibertineTZ-tlf-ot1--base.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc
+INPUT ./sep21.tex
+INPUT ./sep21.tex
+INPUT ./sep21.tex
+INPUT ./sep21.tex
+INPUT sep21.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
@@ -662,6 +667,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLiberti
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTZ.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/stxscr.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1790018335.9361 "main.tex" "main.pdf" "main" 1790018338.64409 0
+["pdflatex"] 1790019183.83717 "main.tex" "main.pdf" "main" 1790019186.6003 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc" 1490131464 2824 67c67e7402c76b84866a6f91f9790b12 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
@@ -50,6 +50,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1229303445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1229303445 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1229303445 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1248133631 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb" 1354061736 879384 e498f90c951041b56f91c0ffbf77a9d2 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb" 1354061736 614791 ea39341e4db76f25cb20c361802d3cd5 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb" 1354061736 538965 19c5c8b7f952ac97afb8565e9c21a82d ""
@@ -286,15 +287,16 @@
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "aug31.tex" 1788559391.40385 4536 f85a659bfde5f00951da129e509795f7 ""
   "kian.sty" 1789951930.36096 861 63fa09de4c2d1e2ca1d086f2fc03238d ""
-  "main.aux" 1790018338.35972 3465 40e602e52a79fd3e665e8ba1810ccc5f "pdflatex"
-  "main.out" 1790018338.36753 5226 a353dbfa96b694ec6dbffafa7513ea3a "pdflatex"
-  "main.tex" 1789953748.18495 2346 a8884d1108bdef4ebd1018d91c36c50c ""
-  "main.toc" 1790018338.36797 2275 1e3380ebde41da06f5d4f848e32e6e34 "pdflatex"
+  "main.aux" 1790019186.31693 3958 ff7495f4d61edba343bcef30b1a17bb1 "pdflatex"
+  "main.out" 1790019186.32076 5826 13b6f790db2cb47e5b76da02bfa54ddf "pdflatex"
+  "main.tex" 1790018510.75389 2360 aab05d8a8ad72abe74f5f62a38d22f98 ""
+  "main.toc" 1790019186.32127 2604 0f7e9f73e245befa127643ed8f0760fa "pdflatex"
   "sep11.tex" 1789151121.88359 2186 9aadd3d24802182eef65f1578aabb773 ""
   "sep14.tex" 1789953643.36023 5039 fe36002f0bed095bebe18e5d8b5c34a2 ""
   "sep16.tex" 1789953898.79559 2889 dc596b3cbee601055d30c7b5e30f04f7 ""
-  "sep18.tex" 1790018335.52372 3821 5b7ae1f0ab7c44971bd586ecb70a7e3c ""
+  "sep18.tex" 1790018483.7822 4134 f5d3d9532901adb0d9f3cff292fa3fb7 ""
   "sep2.tex" 1788394951.47052 9996 0f406b24db4d675953e3d7fa747cfdfa ""
+  "sep21.tex" 1790019183.56753 3668 2abecd0ae64a928efeb737a9f6ce74b6 ""
   "sep4.tex" 1788552792.77542 3836 deb1637394ed314ca71e7a94186ff870 ""
   "sep9.tex" 1789149914.30778 4166 ae2305d63e4a4d9f90c63f9a502ec2df ""
   (generated)
