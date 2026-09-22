@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1790019183.83717 "main.tex" "main.pdf" "main" 1790019186.6003 0
+["pdflatex"] 1790102673.31357 "main.tex" "main.pdf" "main" 1790102676.11213 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc" 1490131464 2833 ab571e969b0d4b8e87f8f63627b1db02 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc" 1490131464 2824 67c67e7402c76b84866a6f91f9790b12 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc" 1490131464 2822 11e839d2bbb939844844619b2cff7df6 ""
@@ -287,16 +287,16 @@
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "aug31.tex" 1788559391.40385 4536 f85a659bfde5f00951da129e509795f7 ""
   "kian.sty" 1789951930.36096 861 63fa09de4c2d1e2ca1d086f2fc03238d ""
-  "main.aux" 1790019186.31693 3958 ff7495f4d61edba343bcef30b1a17bb1 "pdflatex"
-  "main.out" 1790019186.32076 5826 13b6f790db2cb47e5b76da02bfa54ddf "pdflatex"
+  "main.aux" 1790102675.82519 3958 1c85790c7c2baa126b9791c42b39e2c7 "pdflatex"
+  "main.out" 1790102675.83289 5826 13b6f790db2cb47e5b76da02bfa54ddf "pdflatex"
   "main.tex" 1790018510.75389 2360 aab05d8a8ad72abe74f5f62a38d22f98 ""
-  "main.toc" 1790019186.32127 2604 0f7e9f73e245befa127643ed8f0760fa "pdflatex"
+  "main.toc" 1790102675.83334 2604 0f7e9f73e245befa127643ed8f0760fa "pdflatex"
   "sep11.tex" 1789151121.88359 2186 9aadd3d24802182eef65f1578aabb773 ""
   "sep14.tex" 1789953643.36023 5039 fe36002f0bed095bebe18e5d8b5c34a2 ""
   "sep16.tex" 1789953898.79559 2889 dc596b3cbee601055d30c7b5e30f04f7 ""
   "sep18.tex" 1790018483.7822 4134 f5d3d9532901adb0d9f3cff292fa3fb7 ""
   "sep2.tex" 1788394951.47052 9996 0f406b24db4d675953e3d7fa747cfdfa ""
-  "sep21.tex" 1790019183.56753 3668 2abecd0ae64a928efeb737a9f6ce74b6 ""
+  "sep21.tex" 1790102673.28369 6889 f571e5bc135ea2ff389a967d8a200df8 ""
   "sep4.tex" 1788552792.77542 3836 deb1637394ed314ca71e7a94186ff870 ""
   "sep9.tex" 1789149914.30778 4166 ae2305d63e4a4d9f90c63f9a502ec2df ""
   (generated)

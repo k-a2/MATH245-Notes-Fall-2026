@@ -71,7 +71,7 @@ The next smallest number, $4$, has been crossed out (hence is not prime), so we 
 47 & \cancel{48} & \cancel{49} & \cancel{50}
 \end{array}
 \]
-Continuing this algorithm until all numbers have been either crossed out or highlighed, we get the prime numbers:
+Continuing this algorithm until all numbers have been either crossed out or highlighed, we get the prime numbers up to $50$:
 \[
 \boxed{2}\quad \boxed{3}\quad \boxed{5}\quad \boxed{7}\quad
 \boxed{11}\quad \boxed{13}\quad \boxed{17}\quad \boxed{19}\quad
@@ -85,5 +85,44 @@ Continuing this algorithm until all numbers have been either crossed out or high
    Let $p \geq 2$ be a natural number. $p$ is prime if and only if for all $a$, $b \in \ZZ$, if $p \mid ab$, then $p \mid a$ or $p \mid b$. 
 \end{thmbox}
 \begin{proof}
-   Assume that $p$ is prime and that for all $a$, $b \in \ZZ$, $p \mid ab$. Assume $p \nmid a$, then $\gcd(a,p) = 1$.
+   Assume that $p$ is prime and that for all $a$, $b \in \ZZ$, $p \mid ab$. Assume $p \nmid a$, then $\gcd(a,p) = 1$ since $p$ is prime. Thus, by Corollary 8.1.3, $p \mid b$. Conversely, suppose that for all $a$, $b \in \ZZ$, $p \mid ab$ implies $p \mid a$ and $p \mid b$. We suppose $p = st$ for some $s$, $t \in \NN^+$ and show that $s = 1$ or $t = 1$. Since $p \mid st$, $p \mid s$, or $p \mid t$, say $p \mid s$. Then $s = ps'$ hence $p = st = s't$ so $s't = 1$, hence $s' = t = 1$. 
+\end{proof}
+
+\begin{corrbox}
+   If $p \geq 2$ is prime and $p \mid a_1a_2\dots a_n$ for $a_1, \dots, a_n \in \ZZ$, then there exists an $i \leq n$ such that $p \mid ai$.
+\end{corrbox}
+\begin{proof}
+   Can be done trivially by induction of $n$ using the Characterisation of Primes. 
+\end{proof}
+
+\begin{thmbox}
+   Every natural number $n \geq 1$ is a product of primes.
+\end{thmbox}
+\begin{proof}
+   Shown in homework.
+\end{proof}
+
+\begin{corrbox}
+   Every natural number $n \geq 2$ is divisible by a prime.
+\end{corrbox}
+\begin{proof}
+   TBD.
+\end{proof}
+
+\begin{corrbox}[Infinitude of Primes]
+   There are infinitely many prime numbers.
+\end{corrbox}
+\begin{proof}
+   Suppose by contradictoion that there are finitely many primes $p_1$, $\dots$, $p_k$ for some $k \geq 1$. Let $n := p_1p_2\dots p_k + 1$. Then there is a prime $q \mid n$ by the previous corrolary, so $q = p_i$ for some $i \in \{1, \dots, k\}$ since $p_1, \dots, p_k$ are all the primes. But then $1 = n - p_1\dots p_k$ is divisible by $q = p_i$ since $q \mid a$ and $q \mid p_1 \dots p_k$, which is a contradiction.
+\end{proof}
+
+\begin{thmbox}[Fundamental Theorem of Arithmetic]
+   Every nonzero integer $n$ is a unique product of prime integers, i.e. $n = \sigma p_1\dots p_k$, where $\sigma = \pm 1$ and $2 \leq q_1 \leq \dots \leq q_k$ are primes.
+\end{thmbox}
+\begin{proof}
+   The existence of such a representation follows from Theorem 9.3.4. We only need to show the uniqueness of such a representation.
+
+   Let $\sigma p_1 \dots p_k = n = \sigma' q_1 \dots q_m$ where $p_i$ and $p_j$ are prime numbers ordered $2 \leq p_1 \leq \dots \leq p_k$ and $2 \leq q_1 \leq \dots \leq q_m$. The sign must be the same, i.e. $\sigma = \sigma'$, so assume without loss of generality that $n \geq 0$ and $p_1 \dots p_k = n = q_1 \dots q_m$. We prove that $k = m$ and $p_i = q_i$ for all $1 \leq i \leq k$. We can show this holds by strong induction on $n \geq 1$.
+
+   If $n = 1$, then $k = 0 = m$ and we are done. If we suppose $n \geq 2$, then $k$, $m \geq$ and without loss of generality suppose $p_1 \leq q_1$. Then $p_1 \mid q_1 \dots q_m$ so $p_i \mid q_j$ for some $1 \leq j \leq m$. But $q_j$ is prime so $p_1 = q_j$. Since $q_1 \leq \dots q_j$ and $p_1 \leq q_1$, we get $p_1 = q_1 = \dots = q_j$, so $n' := p_2p_3\dots p_k = q_2q_3 \dots q_m$. By the induction hypothesis on $n'$, we get $k = m$ and $p_i = q_i$ for all $i \in [2, k]$, hence $k = m$ and $p_i = q_i$ for all $i \in [1,k]$, whence the representation is unique.
 \end{proof}
