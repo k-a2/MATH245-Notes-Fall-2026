@@ -53,8 +53,7 @@
     fonttitle = \bfseries
 }
 
-\theoremstyle{definition}
-\newtheorem{example}[mycounter]{Example}
+
 
 \newenvironment{solution}[1][Solution]{
   \begin{proof}[#1]
@@ -65,6 +64,20 @@
 
 \theoremstyle{remark}
 \newtheorem{remark}[mycounter]{Remark}
+
+\newtheoremstyle{exmp}
+  {\parskip}   
+  {\parskip}   
+  {}         
+  {}         
+  {\itshape} 
+  {.}         
+  {.5em}      
+  {}         
+
+\theoremstyle{exmp}
+\newtheorem{example}[mycounter]{Example}
+
 
 \renewcommand{\bold}[1]{\textbf{#1}}
 \renewcommand{\it}[1]{\textit{#1}}
@@ -85,30 +98,9 @@
 
 
 \begin{document}
-\begin{titlepage}
-	\begin{titlepage}
-		\begin{flushright}
-			\LARGE
-			\bold{MATH245 (Honours Algebra I) Notes}
-			
-			\vspace{0.5cm}
-			\large
-			McGill University
-			\vspace{0.5 cm}
-
-			By Kian Ahari
-			\vspace{0.5 cm}
-			
-			Last updated on \today
-			\vfill
-		\end{flushright}
-	\end{titlepage}
-\end{titlepage}
-\newpage
-\thispagestyle{empty}
-\tableofcontents
-\newpage
+%\input{titlepage}
 \input{aug31}
+
 \input{sep2}
 \input{sep4}
 \input{sep9}

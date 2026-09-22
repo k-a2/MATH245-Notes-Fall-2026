@@ -1,29 +1,2 @@
 \contentsline {part}{I\hspace {1em}Some Language and Notation of Mathematics}{2}{part.1}%
 \contentsline {section}{\numberline {1}August 31st: Sets}{2}{section.1}%
-\contentsline {section}{\numberline {2}September 2nd: Set Operations}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Basic Set Operations}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Algebra of Set Operations}{5}{subsection.2.2}%
-\contentsline {section}{\numberline {3}September 4th: Proof by Contradiction, Contrapositive, and Induction}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Proof by Contradiction}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Proof by Contrapositive}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Proof by Induction}{7}{subsection.3.3}%
-\contentsline {section}{\numberline {4}September 9th: Complete Induction, Pigeonhole Principle, Functions}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Complete Induction}{8}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Pigeonhole Principle}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Functions}{9}{subsection.4.3}%
-\contentsline {section}{\numberline {5}September 11th: Compositions of Functions}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Compositions of functions}{10}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Binary Relations and Equivalence Relations}{11}{subsection.5.2}%
-\contentsline {section}{\numberline {6}September 14th: Number Systems}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Constructing the Rationals}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}An Overview of Real Numbers}{12}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}The Field of Complex Numbers}{12}{subsection.6.3}%
-\contentsline {part}{II\hspace {1em}Arithmetic of Integers}{13}{part.2}%
-\contentsline {section}{\numberline {7}September 16th: Division}{13}{section.7}%
-\contentsline {section}{\numberline {8}September 18th: The GCD and The Euclidean Algorithm}{15}{section.8}%
-\contentsline {subsection}{\numberline {8.1}The GCD}{15}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}The Euclidean Algorithm}{16}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Prime Numbers}{17}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Primes}{17}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}The Sieve of Eratosthenes}{17}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Properties of Prime Numbers}{18}{subsection.9.3}%
