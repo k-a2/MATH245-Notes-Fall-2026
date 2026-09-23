@@ -1,9 +1,9 @@
-\section{September 2nd: Set Operations}
-
 \subsection{Basic Set Operations}
 
+Now that we have a basic understanding of sets, we will now learn how to work with multiple sets. What do we do if we want to compare elements across different sets? For instance, how can we ``add" and ``subtract" elements of different sets, or find elements that they have in common? This subsection aims to introduce the fundamental operations on sets that help us answer these questions.
+
 \begin{defbox}
-   Let $A$, $B$ be two sets. We define:
+   Let $A$ and $B$ be two sets. Define:
    \begin{itemize}
       \item Their \textbf{union}, denoted $A \cup B$, as the set $\{x \colon x \in A \text{ or } x \in B\}$
       \item Their \textbf{intersection}, denoted $A \cap B$, as the set $\{x \colon x \in A \text{ and } x \in B\}$
@@ -11,26 +11,29 @@
    \end{itemize}
 \end{defbox}
 
-If $A$ is the ambient set (say for instance, $A = \ZZ$, then when $B \subseteq A$ we sometimes write $B^c := A \setminus B$ and call it the \textbf{complement} of $B$ relative to $A$.
+If $A$ is an ambient set (i.e. there are other sets that are contained in $A$), then if $B \subseteq A$ we say the \textbf{complement} of $B$ relative to $A$, denoted $B^c$, is the difference:
+\[ B^c := A \setminus B \]
 
 \begin{example}
-   Within $\ZZ$, define $A := \{n \in \ZZ \colon n \text{ is even}\}$. We have that the complement of $A$, $A^c := \{ \text{set of odd integers}\}$. 
+   Within $\ZZ$, define $A := \{n \in \ZZ \colon n \text{ is even}\}$. We have that the complement of $A$ relative to $\ZZ$, $A^c := \{n \in \ZZ \colon n \text{ is odd}\}$. 
 \end{example}
 
 \begin{defbox}
-   For two elements $a$ and $b$ ($a$ and $b$ are not necessarily sets), we define their \bold{ordered pair}, denoted $(a,b)$ to be the tuple satisfying the property $(a,b) \neq (b,a)$ whenever $a \neq b$. 
+   For two elements $a$ and $b$ ($a$ and $b$ are not necessarily sets), we define their \bold{ordered pair}, denoted $(a,b)$, to be the tuple satisfying the property:
+   \[ (a,b)=(c,d) \quad\text{if and only if}\quad a=c \text{ and } b=d \]
+In particular, if \(a\neq b\), then \((a,b)\neq(b,a)\).$(a,b) \neq (b,a)$ whenever $a \neq b$. 
 \end{defbox}
 
 We will use this notion of ordered pairs to help us with the following important definition:
 
 \begin{defbox}
-   Let $A$, $B$ be two sets. We define their \textbf{cartesian product}, denoted $A \times B$, as the set of ordered pairs $\{(a,b) \colon a \in A \text{ and } b \in B\}$.
+   Let $A$, $B$ be two sets. We define their \textbf{Cartesian product}, denoted $A \times B$, as the set of ordered pairs $\{(a,b) \colon a \in A \text{ and } b \in B\}$.
 \end{defbox}
 
-A notable cartesian product is the Euclidean plane $\RR^2 := \RR \times \RR$. You have already seen this plane defined as the $xy$-plane, where each ordered pair $(x,y)$ represents the $x$- and $y$-coordinates of a point on the plane.
+A notable Cartesian product is the Euclidean plane $\RR^2 := \RR \times \RR$. You have already seen this plane defined as the $xy$-plane, where each ordered pair $(x,y)$ represents the $x$- and $y$-coordinates of a point on the plane.
 
 \begin{example}
-   Let $A := \{0, 1, 2\}$ and $B := \{a, b\}$. Then their cartesian product $A \times B$ is the set $\{(0,a), (0,b), (1,a), (1,b), (2,a), (2,b)\}$.
+   Let $A := \{0, 1, 2\}$ and $B := \{a, b\}$. Then their Cartesian product $A \times B$ is the set $\{(0,a), (0,b), (1,a), (1,b), (2,a), (2,b)\}$.
 \end{example}
 
 \begin{remark}
@@ -47,7 +50,7 @@ A notable cartesian product is the Euclidean plane $\RR^2 := \RR \times \RR$. Yo
 \end{example}
 
 \begin{remark}
-   For each element in a nonempty set, we can either choose to include or not include it in a subset of $A$. This means that for a set $A$ with $n$ elements, there are $2^n$ elements in its power set. 
+   For each element in a nonempty set, we can either choose to include or not include it in a subset of $A$. This means that for a set $A$ with $n$ elements, its power set has $2^n$ elements.  
 \end{remark}
 
 \subsection{Algebra of Set Operations}
@@ -61,58 +64,58 @@ We will show our first proposition (a statement which we will prove) here.
       \item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
       \item $A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)$
       \item $A \setminus (B \cap C) = (A \setminus B) \cup (A \setminus C)$
-      \item $(A^c)^c = A$
+      \item Given an ambient set $U$ such that $A \subseteq U$, $(A^c)^c = A$
    \end{enumerate}
 \end{propbox}
 
 \begin{proof}
-   Each point in this proposition claims that two sets are equal to eachother. By Remark 1.0.6., we will show that each condition holds by showing the two sides of the equality are subsets of each other. 
+   Each statement in this proposition asserts that two sets are equal. By Remark 1.0.6, we prove each equality by showing that each side is a subset of the other.
 
-   Let us start by proving (1). We first want to show that $A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)$. How do we do this? Let us start by choosing an arbitrary element $x \in A \cap (B \cup C)$. If the subset condition holds, then $x$ should also be an element in $(A \cap B) \cup (A \cap C)$. Hence, we want to prove that if $x \in A \cap (B \cup C)$, then $x \in (A \cap B) \cup (A \cap C)$.
+   Let us start by proving (1). We first show that $A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)$. Let $x \in A \cap (B \cup C)$. By definition, $x \in A$ and $x \in B \cup C$. Therefore, $x \in B$ or $x \in C$.
 
-   We start by letting $x$ be an arbitrary element in $A \cap (B \cup C)$. By definition of union and intersection, then $x \in A$ and $x \in B \cup C$. However we do not know if $x \in B$ or if $x \in C$. To account for this, we will split out proof into two cases.
+   If $x \in B$, then $x \in A \cap B$, and hence $x \in (A \cap B) \cup (A \cap C)$. If $x \in C$, then $x \in A \cap C$, and hence $x \in (A \cap B) \cup (A \cap C)$. Therefore, \[A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C).\]
 
-   Firstly, we suppose $x \in B$. Then, $x \in A \cap B$, which immediately implies that $x \in (A \cap B) \cup (A \cap C)$. Secondly, we suppose $x \in C$. Then $x \in A \cap C$, which again implies that $x \in (A \cap B) \cup (A \cap C)$.  Hence we have shown $A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)$ and the first half of the proof is complete.
+   Conversely, let $x \in (A \cap B) \cup (A \cap C)$. Then $x \in A \cap B$ or $x \in A \cap C$.
 
-   We will now prove the converse condition holds, i.e. $A \cap (B \cup C) \supseteq (A \cap B) \cup (A \cap C)$. Let $x \in (A \cap B) \cup (A \cap C)$. By definition, we have that $x \in A \cap B$ or $x \in A \cap C$, but we do not know which. So let us again use cases. Firstly, if $x \in A \cap B$, then $x \in A$ and $x \in B$, so $x \in A \cap (B \cup C)$. Secondly, if $x \in A \cap C$, then  $x \in A$ and $x \in C$, so $x \in A \cap (B \cup C)$. Hence we have shown $A \cap (B \cup C) \supseteq (A \cap B) \cup (A \cap C)$, so condition (1) holds.
+   If $x \in A \cap B$, then $x \in A$ and $x \in B$, so $x \in A \cap (B \cup C)$. If $x \in A \cap C$, then $x \in A$ and $x \in C$, so $x \in A \cap (B \cup C)$. Therefore, \[(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C).\] Hence condition (1) holds.
 
-   The proof for (1) was very wordy for the sake of exposition. We prove the following conditions much more tersely.
+   For (2), let $x \in A \cup (B \cap C)$. If $x \in A$, then $x \in A \cup B$ and $x \in A \cup C$. Therefore, $x \in (A \cup B) \cap (A \cup C)$.
 
-   For (2), let $x \in A \cup (B \cap C)$. By definition, $x \in A$ or $x \in B \cap C$. In the case $x \in A$, then $x \in (A \cap B) \cup (A \cap C)$. In the case $x \in B \cap C$, then $x \in B$ and $x \in C$, which implies $x \in (A \cap B) \cup (A \cap C)$. Hence $A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C)$.
+   If $x \in B \cap C$, then $x \in B$ and $x \in C$. Thus $x \in A \cup B$ and $x \in A \cup C$, so again $x \in (A \cup B) \cap (A \cup C)$. Hence \[A \cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C).\]
 
-   Conversely, let $x \in (A \cup B) \cap (A \cup C)$. By definition, $x \in (A \cup B)$ and $x \in (A \cup C)$, which implies $x \in A$ or $x \in (B \cup C)$, which by definition implies that $x \in A \cup (B \cap C)$. Hence $x \in (A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C)$ and (2) holds.
+   Conversely, let $x \in (A \cup B) \cap (A \cup C)$. Then $x \in A \cup B$ and $x \in A \cup C$.
 
-   For (3), let $x \in A \setminus (B \cup C)$. By definition, $x \in A$ and $x \notin (B \cup C)$. Since $x \notin (B \cup C)$, $x \notin B$ and $x \notin C$\footnotemark[3]. \footnotetext[3]{We will prove this identity in Proposition 2.2.11, but for now a Venn diagram illustrates this point well.}Hence $x \in A$ and $x \notin B$, and $x \in A$ and $x \notin C$ all hold true, which means $x \in (A \setminus B) \cap (A \setminus C)$. Hence  $A \setminus (B \cup C) \subseteq (A \setminus B) \cap (A \setminus C)$.
+   If $x \in A$, then $x \in A \cup (B \cap C)$. Otherwise, $x \notin A$. Since $x \in A \cup B$ and $x \notin A$, we must have $x \in B$. Similarly, since $x \in A \cup C$ and $x \notin A$, we must have $x \in C$. Thus $x \in B \cap C$, and therefore $x \in A \cup (B \cap C)$. Hence \[(A \cup B) \cap (A \cup C) \subseteq A \cup (B \cap C),\] so condition (2) holds.
 
-   Conversely, let $x \in (A \setminus B) \cap (A \setminus C)$. By definition, $x \in A \setminus B$ and $x \in A \setminus C$, which means ($x \in A$ and $x \notin B$) and ($x \in A$ and $x \notin C$). Rearranging this gives $x \in A$ and ($x \notin B$ and $x \notin C$). Since $x \notin B$ and $x \notin C$, it follows that $x \notin (B \cup C)$. Thus, $x \in A$ and $x \notin (B \cup C)$, which implies $x \in A \setminus (B \cup C)$. Hence $(A \setminus B) \cap (A \setminus C) \subseteq A \setminus (B \cup C)$, and (3) holds.
+   For (3), let $x \in A \setminus (B \cup C)$. By definition, $x \in A$ and $x \notin B \cup C$. Since $x \notin B \cup C$, we have $x \notin B$ and $x \notin C$; otherwise, $x$ would belong to $B \cup C$. Thus $x \in A \setminus B$ and $x \in A \setminus C$. Therefore, \[x \in (A \setminus B) \cap (A \setminus C),\] and hence \[A \setminus (B \cup C) \subseteq (A \setminus B) \cap (A \setminus C).\]
 
-   For (4), let $x \in A \setminus (B \cap C)$. By definition, $x \in A$ and $x \notin (B \cap C)$. Since $x \notin (B \cap C)$, we have $x \notin B$ or $x \notin C$. This means ($x \in A$ and $x \notin B$) or ($x \in A$ and $x \notin C$), which by definition implies that $x \in A \setminus B$ or $x \in A \setminus C$. Hence $x \in (A \setminus B) \cup (A \setminus C)$, and $A \setminus (B \cap C) \subseteq (A \setminus B) \cup (A \setminus C)$.
+   Conversely, let $x \in (A \setminus B) \cap (A \setminus C)$. Then $x \in A \setminus B$ and $x \in A \setminus C$, which means $x \in A$, $x \notin B$, and $x \notin C$. Since $x \notin B$ and $x \notin C$, it follows that $x \notin B \cup C$. Thus $x \in A \setminus (B \cup C)$. Therefore, \[(A \setminus B) \cap (A \setminus C) \subseteq A \setminus (B \cup C),\] and condition (3) holds.
 
-Conversely, let $x \in (A \setminus B) \cup (A \setminus C)$. By definition, $x \in A \setminus B$ or $x \in A \setminus C$, which means ($x \in A$ and $x \notin B$) or ($x \in A$ and $x \notin C$). Factoring out $x \in A$ gives $x \in A$ and ($x \notin B$ or $x \notin C$). Since $x \notin B$ or $x \notin C$, it follows that $x \notin (B \cap C)$. Thus $x \in A$ and $x \notin (B \cap C)$, so $x \in A \setminus (B \cap C)$. Hence $(A \setminus B) \cup (A \setminus C) \subseteq A \setminus (B \cap C)$, and (4) holds.
+   For (4), let $x \in A \setminus (B \cap C)$. By definition, $x \in A$ and $x \notin B \cap C$. Therefore, $x \notin B$ or $x \notin C$.
 
-   Lastly, (5) is so simple to prove that we do not even need to show that both sides of the equality are subsets each other. Instead, by the definition of the complement, we have:
-   \[ A^c := \{x \colon x \notin A\} \]
-   Hence the complement of $A^c$ is, by definition, the set of all elements that are not in the complement of $A$, or:
-   \[ (A^c)^c := \{x \colon x \in A\} \]
-   which is equal to $A$.
+   If $x \notin B$, then $x \in A \setminus B$. If $x \notin C$, then $x \in A \setminus C$. Hence $x \in (A \setminus B) \cup (A \setminus C)$. Therefore, \[A \setminus (B \cap C) \subseteq (A \setminus B) \cup (A \setminus C).\]
 
-   We have successfully proved all five statements. To indicate that a proof is finished, one usually puts a square on the right side of the page, as is seen here:
+   Conversely, let $x \in (A \setminus B) \cup (A \setminus C)$. Then $x \in A \setminus B$ or $x \in A \setminus C$. Thus $x \in A$ and either $x \notin B$ or $x \notin C$. Therefore, $x \notin B \cap C$, so $x \in A \setminus (B \cap C)$. Hence \[(A \setminus B) \cup (A \setminus C) \subseteq A \setminus (B \cap C),\] and condition (4) holds.
+
+   Finally, by definition of the complement relative to $U$, \[A^c = U \setminus A.\] Therefore, \[(A^c)^c = U \setminus (U \setminus A) = A.\] Hence condition (5) holds.
 \end{proof}
 
 \begin{propbox}[De Morgan's Laws]
-   Let $A$ be a set, and $B \subseteq A$ and $C \subseteq A$. Then the following properties hold:
+   Let $U$ be a set, and let $B,C \subseteq U$. Then:
    \begin{enumerate}
-      \item $(B \cap C)^c = B^c \cup C^c$
-      \item $(B \cup C)^c = B^c \cap C^c$
+      \item $(B \cap C)^c = B^c \cup C^c$.
+      \item $(B \cup C)^c = B^c \cap C^c$.
    \end{enumerate}
 \end{propbox}
 
 \begin{proof}
-   For (1), let $x \in (B \cap C)^c$. By definition of the complement, $x \in A$ and $x \notin B \cap C$. Since $x \notin B \cap C$, it is not the case that both $x \in B$ and $x \in C$, which means $x \notin B$ or $x \notin C$. If $x \notin B$, then $x \in B^c$; if $x \notin C$, then $x \in C^c$. In either case, $x \in B^c \cup C^c$. Hence $(B \cap C)^c \subseteq B^c \cup C^c$.
+   For (1), let $x \in (B \cap C)^c$. By definition of the complement, $x \in U$ and $x \notin B \cap C$. Therefore, it is not the case that both $x \in B$ and $x \in C$. Hence $x \notin B$ or $x \notin C$.
 
-   Conversely, let $x \in B^c \cup C^c$. By definition, $x \in B^c$ or $x \in C^c$, which means $x \notin B$ or $x \notin C$. This is equivalent to saying $x \notin (B \cap C)$. Since $x \in A$ (given that $B, C \subseteq A$), it follows that $x \in (B \cap C)^c$. Thus $B^c \cup C^c \subseteq (B \cap C)^c$, and condition (1) holds.
+   If $x \notin B$, then $x \in B^c$. If $x \notin C$, then $x \in C^c$. In either case, $x \in B^c \cup C^c$. Thus \[(B \cap C)^c \subseteq B^c \cup C^c.\]
 
-   For (2), let $x \in (B \cup C)^c$. By definition, $x \in A$ and $x \notin (B \cup C)$. Since $x$ is not in the union $B \cup C$, we must have $x \notin B$ and $x \notin C$. This means $x \in B^c$ and $x \in C^c$, which implies $x \in B^c \cap C^c$. Hence $(B \cup C)^c \subseteq B^c \cap C^c$.
+   Conversely, let $x \in B^c \cup C^c$. Then $x \in B^c$ or $x \in C^c$, so $x \notin B$ or $x \notin C$. Therefore, $x \notin B \cap C$. Since $x \in U$, it follows that $x \in (B \cap C)^c$. Hence \[B^c \cup C^c \subseteq (B \cap C)^c.\] Therefore, \[(B \cap C)^c = B^c \cup C^c.\]
 
-   Conversely, let $x \in B^c \cap C^c$. By definition, $x \in B^c$ and $x \in C^c$, meaning $x \notin B$ and $x \notin C$. This implies that $x \notin (B \cup C)$. Since $x \in A$, we conclude that $x \in (B \cup C)^c$. Thus $B^c \cap C^c \subseteq (B \cup C)^c$, and condition (2) holds.
+   For (2), let $x \in (B \cup C)^c$. By definition, $x \in U$ and $x \notin B \cup C$. Therefore, $x \notin B$ and $x \notin C$. Thus $x \in B^c$ and $x \in C^c$, which implies that \[x \in B^c \cap C^c.\] Hence \[(B \cup C)^c \subseteq B^c \cap C^c.\]
+
+   Conversely, let $x \in B^c \cap C^c$. Then $x \in B^c$ and $x \in C^c$, meaning that $x \notin B$ and $x \notin C$. Therefore, $x \notin B \cup C$. Since $x \in U$, we conclude that $x \in (B \cup C)^c$. Thus \[B^c \cap C^c \subseteq (B \cup C)^c.\] Therefore, \[(B \cup C)^c = B^c \cap C^c. \qedhere \]
 \end{proof}

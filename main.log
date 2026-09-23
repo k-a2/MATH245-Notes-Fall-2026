@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.20)  22 SEP 2026 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.20)  23 SEP 2026 15:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -864,103 +864,115 @@ Package hyperref Info: Link coloring OFF on input line 100.
 Couldn't patch \deferred@thm@head!
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-(./aug31.tex
+(./titlepage.tex
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 20.74pt on input line 4.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 20.74pt on input line 5.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 8.
+ [1
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}]
+LaTeX Font Info:    Trying to load font information for OT1+LinuxBiolinumT-TLF on input line 22.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/libertine/OT1LinuxBiolinumT-TLF.fd
+File: OT1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/LinuxBiolinumT-TLF.
+)
+LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 22.
+LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 22.
+LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
+(Font)              scaled to size 17.28pt on input line 22.
+ (./main.toc
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 1.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 2.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.8pt on input line 3.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.6pt on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 3.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+))
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 \newpage
+              [1{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc}]) (./aug31.tex
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 17.28pt on input line 1.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 1.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 1.
-LaTeX Font Info:    Trying to load font information for OT1+LinuxBiolinumT-TLF on input line 3.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/libertine/OT1LinuxBiolinumT-TLF.fd
-File: OT1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/LinuxBiolinumT-TLF.
-)
-LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 3.
 LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 3.
-LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 17.28pt on input line 3.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 11.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 11.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 11.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxmia.fd
-File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
-)
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 11.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
-File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
-)
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 11.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
-File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
-)
+(Font)              scaled to size 14.4pt on input line 5.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 18.
+(Font)              scaled to size 12.0pt on input line 20.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 32.
+(Font)              scaled to size 10.0pt on input line 34.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 32.
+(Font)              scaled to size 7.3pt on input line 34.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 32.
- [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}
-
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_edcawa.enc}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc}]
+(Font)              scaled to size 5.5pt on input line 34.
+ [2{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc}]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 58.
-) (./sep2.tex
-LaTeX Font Info:    Font shape `OT1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 14.4pt on input line 3.
+(Font)              scaled to size 10.0pt on input line 60.
+) (./sep2.tex [3]
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF on input line 8.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
 File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 8.
- [2] [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}] [4] [5]) (./sep4.tex [6]) (./sep9.tex [7] [8]) (./sep11.tex [9]) (./sep14.tex [10] [11]) (./sep16.tex [12] [13]) (./sep18.tex [14]
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 12.0pt on input line 57.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 8.8pt on input line 57.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/sb/n' will be
-(Font)              scaled to size 6.6pt on input line 57.
- [15{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc}]) (./sep21.tex [16] [17]) [18] (./main.aux)
+ [4{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}] [5] [6]) [7] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 13B6F790DB2CB47E5B76DA02BFA54DDF;5826.
+(rerunfilecheck)             Checksum: 81DD9AD94F4AC9019DB3D4CEA9BD46B9;839.
  ) 
 Here is how much of TeX's memory you used:
- 39629 strings out of 474116
- 884713 string characters out of 5743682
- 1983187 words of memory out of 5000000
- 61148 multiletter control sequences out of 15000+600000
- 650120 words of font info for 205 fonts, out of 8000000 for 9000
+ 39364 strings out of 474116
+ 880784 string characters out of 5743682
+ 1944187 words of memory out of 5000000
+ 61000 multiletter control sequences out of 15000+600000
+ 620669 words of font info for 155 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,16n,121p,1193b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/LibertineMathRM.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTZ.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/stxscr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on main.pdf (18 pages, 512589 bytes).
+ 114i,12n,121p,1193b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/stxscr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on main.pdf (8 pages, 348204 bytes).
 PDF statistics:
- 434 PDF objects out of 1000 (max. 8388607)
- 365 compressed objects within 4 object streams
- 144 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
