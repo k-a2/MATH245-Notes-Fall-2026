@@ -18,7 +18,7 @@
 \usepackage{tcolorbox}
 \usepackage{tikz}
 \usepackage[sf,it]{titlesec}
-\usepackage{xcolor}
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
 
 \pgfplotsset{compat=1.18} 
 \usetikzlibrary{shadows}
@@ -26,6 +26,60 @@
 \renewcommand{\qedsymbol}{$\blacksquare$}
 
 \DeclareMathOperator{\sgn}{sgn}
+
+
+\newcounter{mycounter}[section]
+\renewcommand{\themycounter}{\thesubsection.\arabic{mycounter}}
+\newtcolorbox{defbox}
+{
+    code={\refstepcounter{mycounter}},
+    title={Definition \themycounter},
+    colframe = cyan!70,
+    colback  = cyan!10,
+    fonttitle = \bfseries
+}
+
+\newtcolorbox{thmbox}[1][]{
+    code={\refstepcounter{mycounter}},
+    title={Theorem \themycounter\ifstrempty{#1}{}{ (#1)}},
+    colframe = RoyalPurple!70,
+    colback  = RoyalPurple!10,
+    fonttitle = \bfseries
+}
+
+\newtcolorbox{propbox}[1][]{
+    code={\refstepcounter{mycounter}},
+    title={Proposition \themycounter\ifstrempty{#1}{}{ (#1)}},
+    colframe = PineGreen!70,
+    colback  = PineGreen!10,
+    fonttitle = \bfseries
+}
+
+\newtcolorbox{lemmabox}{
+    code={\refstepcounter{mycounter}},
+    title={Lemma \themycounter},
+    colframe = DarkOrchid!70,
+    colback  = DarkOrchid!10,
+    fonttitle = \bfseries
+}
+
+\newtcolorbox{corrbox}{
+    code={\refstepcounter{mycounter}},
+    title={Corrolary \themycounter},
+    colframe = Emerald!70,
+    colback  = Emerald!10,
+    fonttitle = \bfseries
+}
+
+\newtcolorbox{warning}
+{
+    title={Warning},
+    colframe = RedOrange!70,
+    colback  = RedOrange!10,
+    fonttitle = \bfseries
+}
+
+
 
 
 \newcommand{\NN}{\mathbb{N}}

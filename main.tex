@@ -2,59 +2,6 @@
 % My .sty:
 \usepackage{kian}
 
-\newcounter{mycounter}[section]
-\renewcommand{\themycounter}{\thesubsection.\arabic{mycounter}}
-\newtcolorbox{defbox}
-{
-    code={\refstepcounter{mycounter}},
-    title={Definition \themycounter},
-    colframe = cyan!70,
-    colback  = cyan!10,
-    fonttitle = \bfseries
-}
-
-\newtcolorbox{thmbox}[1][]{
-    code={\refstepcounter{mycounter}},
-    title={Theorem \themycounter\ifstrempty{#1}{}{ (#1)}},
-    colframe = violet!70,
-    colback  = violet!10,
-    fonttitle = \bfseries
-}
-
-\newtcolorbox{propbox}[1][]{
-    code={\refstepcounter{mycounter}},
-    title={Proposition \themycounter\ifstrempty{#1}{}{ (#1)}},
-    colframe = brown!70,
-    colback  = brown!10,
-    fonttitle = \bfseries
-}
-
-\newtcolorbox{lemmabox}{
-    code={\refstepcounter{mycounter}},
-    title={Lemma \themycounter},
-    colframe = magenta!70,
-    colback  = magenta!10,
-    fonttitle = \bfseries
-}
-
-\newtcolorbox{corrbox}{
-    code={\refstepcounter{mycounter}},
-    title={Corrolary \themycounter},
-    colframe = green!70,
-    colback  = green!10,
-    fonttitle = \bfseries
-}
-
-\newtcolorbox{warning}
-{
-    title={Warning},
-    colframe = red!70,
-    colback  = red!10,
-    fonttitle = \bfseries
-}
-
-
-
 \newenvironment{solution}[1][Solution]{
   \begin{proof}[#1]
   \renewcommand{\qedsymbol}{$\checkmark$}
@@ -101,11 +48,12 @@
 \input{titlepage}
 \input{aug31}
 \input{sep2}
-%\input{sep4}
-%\input{sep9}
-%\input{sep11}
-%\input{sep14}
-%\input{sep16}
-%\input{sep18}
+\input{sep4}
+\input{sep9}
+\input{sep11}
+\input{sep14}
+\input{sep16}
+\input{sep18}
 %\input{sep21}
+%\input{sep23}
 \end{document}

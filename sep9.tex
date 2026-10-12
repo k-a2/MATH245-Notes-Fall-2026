@@ -1,36 +1,43 @@
-\section{September 9th: Complete Induction, Pigeonhole Principle, Functions}
-
 \subsection{Complete Induction}
+
+Complete induction is a variant of the Principle of Inuction. To differentiate it from Theorem 2.3.3, complete induction is sometimes called \textit{strong induction} while Theorem 2.3.3 is called \textit{weak induction}. Note that complete induction is logically equivalent to weak induction and by consequence, the well-ordered axiom. 
 
 \begin{thmbox}[Complete Induction]
    Let $n_0 \in \NN$ and $P \subseteq \NN$ satisfying that for each $n \geq n_0$, if $\{n_0, n_0 + 1, \dots, n - 1\} \subseteq P$, then $n \in P$. Then $P \supseteq \{n_0, n_0 + 1, \dots \} = \{n \in \NN \colon n \geq n_0\}$. 
 \end{thmbox}
 
-Complete induction is often known as \textbf{"strong induction"}, while Theorem 3.3.3 is often known as \textbf{"weak induction"}. 
-
 \begin{proof}
-   Left as an exercise.
+   We will prove Theorem 2.4.6 using the Well-ordered axiom. First, remark that for $n = n_0$, $\{n_0, n_0 + 1, \dots, n - 1\} = \emptyset$.  Suppose by contradiction that $P \not\supseteq \{n \in \NN \colon n \geq n_0 \}$. Then the set $S := \{ n \in \NN \colon n \geq n_0, n \notin P\} \neq \emptyset$ and contains a least element $n_\alpha$ by the axiom of well-orderedness. 
+      Remark $n_\alpha > n_0$, since if $n_a = n_0$, we have that $\{n_0, n_0 + 1, \dots, n - 1 \} = \emptyset \implies n \in P$, which would be a contradiction. Hence $n_\alpha - 1 \geq n_0$ and moreover $n_\alpha - 1 \notin S$ since $n_\alpha$ was the least element of $S$, whence $n_\alpha - 1 \in P$. Indeed, we have that $\{n_0, n_0 + 1, \dots n_\alpha - 1\} \subseteq P$ by the minimality of $n_\alpha$, but this implies that $n_\alpha \in P$, which is a contradiction.
 \end{proof}
+
+Although Theorems 2.3.3 and 2.4.6 are equivalent, there are times (see Proposition 2.5.8 below) where it is much easier to prove a statement by strong induction than by weak induction.
 
 \subsection{The Pigeonhole Principle}
 
-The Pigeonhole Principle is a powerful consequence of the well-ordered axiom which states that if there are $n$ pigeons and $m$ pigeonholes, where $n \geq m$, then at least one pigeonhole has two or more pigeons in it.
+The Pigeonhole Principle is a powerful consequence of the well-ordered axiom which states that if there are $n$ pigeons and $m$ pigeonholes, where $n \geq m$, then at least one pigeonhole has two or more pigeons in it. 
 
 \begin{propbox}
    Let $a_1, a_2, \dots a_5 \in \ZZ$. If we divide all integers by 4, then there are two among them with the same remainder.
 \end{propbox}
 \begin{proof}
-   The possible remainders are $\{0, 1, 2, 3\}$. Since there are 5 integers that can have 4 different remainders, we invoke the pigeonhole principle to show that at least two among $a_1, \dots a_5$ with the same remainder. 
+   The possible remainders are $\{0, 1, 2, 3\}$. Since there are 5 integers that can have 4 different remainders, we invoke the pigeonhole principle to show that at least two among $a_1, \dots a_5$ have the same remainder. 
 \end{proof}
 
 \begin{propbox}
-   For any group of greater than 2 people, there are two different people who have the same number of friends.
+   For any group of of 2 or more people, there are two different people who have the same number of friends.
 \end{propbox}
 \begin{proof}
-   Left as an exercise. 
+   Let us first consider the case $n = 2$. The statement is trivial, as both people are either friends with each other or have no friends. 
+
+   Now let $N \geq 2$ and suppose the statement holds for all $n \leq N$. We consider a group of $N + 1$ friends. Suppose that one person in the group does not have any friends. Then there are $N$ people remaining who have at least one friend. By complete induction, there are at least two people in this group with the same number of friends, so the statement holds for the group of $N + 1$ people.   
+
+   Suppose now that everyone in the group has at least one friend. Then each person has anywhere from $1$ to $N$ friends. Since there are $N + 1$ people in this group, the pigeonhole principle states that there must be two people with the same number of friends. 
 \end{proof}
 
-\subsection{Functions}
+\section{Functions}
+
+\subsection{Basic Functions}
 
 Intuitively, we can think of functions as mapping elements from one set to a unique element in another. More formally:
 
@@ -47,7 +54,7 @@ Intuitively, we can think of functions as mapping elements from one set to a uni
 \end{defbox}
 
 \begin{example}
-   Consider the function $f \colon \RR \to \RR$ given by $f(x) := x^2$. Consider as well the function $g \colon \RR \to [0, \infty)$ given by $g(x) := x^2$. We have that $\Gamma_f = \Gamma_g$, but $f$ and $g$ are technically two different functions. However, $f \equiv g$. 
+   Consider the function $f \colon \RR \to \RR$ given by $f(x) := x^2$. Consider as well the function $g \colon \RR \to [0, \infty)$ given by $g(x) := x^2$. We have that $\Gamma_f = \Gamma_g$, but $f$ and $g$ are technically two different functions since their codomains differ. However, $f \equiv g$. 
 \end{example}
 
 \begin{defbox}
@@ -66,8 +73,11 @@ Intuitively, we can think of functions as mapping elements from one set to a uni
 \begin{defbox}
    Let $f \colon X \to Y$ be a function.
    \begin{enumerate}
-      \item We say $f$ is \textbf{injective} or \textbf{one-to-one} if for every $y \in Y$, there exists one and only on $x \in X$ such that $f(x) = y$. In other words, for all $x, x_0 \in X$, $f(x) = f(x_0) \implies x = x_0$.
+      \item We say $f$ is \textbf{injective} or \textbf{one-to-one} if for every $y \in Y$, there exists one and only one $x \in X$ such that $f(x) = y$. In other words, for all $x, x_0 \in X$, $f(x) = f(x_0) \implies x = x_0$.
       \item We say $f$ is \textbf{surjective} or \textbf{onto} if for all $y \in Y$, there exists $x \in X$ such that $f(x) = y$. In other words $f(X) = Y$.
       \item We say $f$ is \textbf{bijective} if it is both injective and surjective.
    \end{enumerate}
 \end{defbox}
+\begin{example}
+   The function $f \colon \RR \to \RR$ defined by $f(x) := x^2$ is neither injective nor surjective, The function $g \colon \RR \to [0, \infty)$, $g(x) := x^2$ is surjective but not injective, as $f(1) = f(-1)$ but $1 \neq -1$. The function $h \colon [0, \infty) \to [0, \infty)$ defined by $h(x) := x^2$ is both injective and surjective, hence it is bijective. 
+\end{example}

@@ -1,45 +1,49 @@
-\section{September 4th: Proof by Contradiction, Contrapositive, and Induction}
+\section{Methods of Proof}
+
+Propositions 1.3.19 and 1.3.20 were two statements with results that we did not know were true, but were able to deduce as true by \textit{proving} them. We proved the statements were true by showing that each side of the equality was a subset of the other. This method of proof outlined in Remark 1.1.7 works well when trying to prove equality, but there are many, many other methods of proof that we can use to show other statements are true.
 
 \subsection{Proof by Contradiction}
 
-When we are asked to prove a statement $P$, we can prove $P$ by assuming that $P$ is false (i.e $\neg P$---the "$\neg$" symbol means "not"---is true) and then showing that $\neg P$ cannot be true. This is called a \textbf{proof by contradiction.}
+Suppose we are asked to prove a statement $P$. We can prove $P$ is true by assuming that $P$ is false (i.e $\neg P$---the ``$\neg$" symbol means ``not"---is true) and then showing that $\neg P$ cannot be true. This is called a \textbf{proof by contradiction.}
+
+The following is one of the most fundamental statements in mathematics and elengantly proved by contradiction.
 
 \begin{propbox}
-   $\sqrt{2} \notin \QQ$.
+   $\sqrt{2} \notin \QQ$ ($\sqrt{2}$ is not a rational number).
 \end{propbox}
 
 \begin{proof}
-   Let us assume, by contradiction, that the negation of the proposition is true, i.e. we assume that $\sqrt{2} \in \QQ$. Then, we can write $\sqrt{2} = p/q$, where $p$ and $q$ are two integers that are irreducible. Then $2 = p^2/q^2$ and $2q^2 = p^2$. Since $p^2$ is the product of $2$ and $q^2$, then $p^2$ is even, which immediately implies $p$ is even. Since $p$ is even, it can be written as $p = 2k$ where $k \in \ZZ$. Squaring both sides yields $p^2 = 4k^2$. Let $2q^2 = 4k^2$ and so $q^2 = 2k^2$, so $q^2$ is even which implies $q^2$ is also even. But we assumed that $p$ and $q$ are irreducible. Contradiction.  
+   Let us assume, by contradiction, that the negation of the proposition is true, i.e. we assume that $\sqrt{2} \in \QQ$. Then, we can write $\sqrt{2} = p/q$, where $p$ and $q$ are two integers, $q \neq 0$, that are irreducible (i.e. they have no common factors). Then $2 = p^2/q^2$ and $2q^2 = p^2$. Recall an even integer $a$ can be writen as $a := 2b$ for $b \in \ZZ$. Since $p^2$ is the product of $2$ and $q^2$, then $p^2$ is even, which immediately implies $p$ is even. Since $p$ is even, it can be written as $p = 2k$ where $k \in \ZZ$. Squaring both sides yields $p^2 = 4k^2$. Let $2q^2 = 4k^2$ and so $q^2 = 2k^2$, so $q^2$ is even which implies $q^2$ is also even, but we assumed that $p$ and $q$ are irreducible. Contradiction. So $\sqrt{2} \notin \QQ$. 
 \end{proof}
 
 \subsection{Proof by Contrapositive}
 
 Suppose we are trying to prove a statement $P \implies Q$, i.e. if $P$ is true, then $Q$ is true as well. This statement is logically equivalent to
 \[ \neg Q \implies \neg P \]
-which is the \textbf{contrapositive} of $P \implies Q$. It is often easier to prove the contrapositive of the statement rather than proving the statement directly.
+which is the \textbf{contrapositive} of $P \implies Q$. Note that this differs from a proof by contradiction, as instead of leading to an absurdity, proving by the contrapositive shows $\not P$ is true and thus the statement must be true. It is often easier to prove the contrapositive of the statement rather than proving the statement directly.
 
 \begin{lemmabox}
    Let $a, b \in \ZZ$. If $ab$ is even, then $a$ or $b$ are even.
 \end{lemmabox}
 \begin{proof}
-   Let us prove the contrapositive of the statement: if both $a$ and $b$ are odd, then $ab$ is odd. Assume $a$ and $b$ are even, then $a := 2k + 1$ and $b := 2l + 1$ for $k, l \in \ZZ$. We write $ab = (2k + 1)(2l + 1) = 4kl + 2k + 2l + 1= 2(2kl + k + l) + 1$. Let $m := 2kl + k + l$, so $ab = 2m + 1$ and so $ab$ is odd. 
+   Let us prove the contrapositive of the statement: if both $a$ and $b$ are odd, then $ab$ is odd. Assume $a$ and $b$ are odd integers, then $a := 2k + 1$ and $b := 2l + 1$ for $k, l \in \ZZ$. We write $ab = (2k + 1)(2l + 1) = 4kl + 2k + 2l + 1= 2(2kl + k + l) + 1$. Let $m := 2kl + k + l$, we have $ab = 2m + 1$ and since $m \in \ZZ$, $ab$ is odd. 
 \end{proof}
 
 \subsection{Proof by Induction}
 
-A key property of the natural numbers is that they are well ordered, namely every nonempty subset $S \subseteq \NN$ has a unique least element $n_0$ (i.e. every element in $S$ is less than or equal to $n_0$. This property is known as the \textbf{axiom of well-orderedness}.
+A key property of the natural numbers is that they are well ordered, namely every nonempty subset $S \subseteq \NN$ has a unique least element $n_0$ (i.e. every element in $S$ is less than or equal to $n_0$. This property is known as the \textbf{axiom of well-orderedness}. The axiom of well-orderedness gives rise to an equivalent, but extremely useful statement:
 
 \begin{thmbox}[Principle of Induction]
    Let $P \subseteq \NN$. Suppose the following statements are true:
    \begin{enumerate}
-      \item The base case: for $n_0 \in \NN$, $n_0 \in P$.
-      \item The inductive step: for all $n \in \NN$, if $n \in P$, then $n + 1 \in P$.
+      \item For $n_0 \in \NN$, $n_0 \in P$ (the base case).
+      \item For all $n \in \NN$, if $n \in P$, then $n + 1 \in P$ (the inductive step).
    \end{enumerate}
    Then $P \supseteq \{n \in \NN \colon n \geq n_0\}$.
 \end{thmbox}
 
 \begin{proof}
-   By contradiction, suppose that $P \not\supseteq \{n \in \NN \colon n \geq n_0\}$. Then the set $S := \{n \in \NN \colon n \geq 0 \text{ and } n \notin P\} \neq \emptyset$. Let $s_0$ be the least element in $S$ by the well-ordered axiom. We have that $s_0 \neq n_0$ since $n_0 \in P$. Thus $s_0 > n_0$ and $s_0 - 1 \geq n_0$. Since $s_0$ is a least element of $S$, $s_0 - 1 \notin S$ hence $s_0 - 1 \in P$. But by condition (2) $s_0 \in P$. Contradiction.
+   By contradiction, suppose that $P \not\supseteq \{n \in \NN \colon n \geq n_0\}$. Then the set $S := \{n \in \NN \colon n \geq 0 \text{ and } n \notin P\} \neq \emptyset$. Since $S \subseteq \NN$, there exists a least element $s_0 \in S$ by the well-ordered axiom. We have that $s_0 \neq n_0$ since $n_0 \in P$. Thus $s_0 > n_0$ and $s_0 - 1 \geq n_0$. Since $s_0$ is a least element of $S$, $s_0 - 1 \notin S$ hence $s_0 - 1 \in P$. But by the inductive step, $s_0 \in P$. Contradiction.
 \end{proof}
    
 
@@ -52,12 +56,24 @@ A key property of the natural numbers is that they are well ordered, namely ever
    \[ 0 = \frac{0(1)}{2} = 0 \]
    Now, let us assume that the condition holds for every $n \in \NN$. We want to show the condition holds for $n + 1$. We now want to prove:
    \[ 1 + 2 + \dots + n + (n + 1) = \frac{(n+1)(n+2)}{2} \]
-   By the inductive hypothesis, let us write $1 + 2 + \dots + n = n(n+1)/2$. By simple manipulations, we see that:
+   By the inductive hypothesis, let us write $1 + 2 + \dots + n = n(n+1)/2$. We can do this because we assumed that the statement holds for every $n \in \NN$. With simple algebraic manipulations, we see that:
    \begin{align*}
       \frac{n(n+1)}{2} + (n+1) &= \frac{(n+1)(n+2)}{2} \\
       \frac{n(n+1) + 2(n+1)}{2} &= \frac{(n+1)(n+2)}{2} \\
-     \frac{(n+1)(n+2)}{2}        &= \frac{(n+1)(n+2)}{2} \qedhere
+     \frac{(n+1)(n+2)}{2}        &= \frac{(n+1)(n+2)}{2}
   \end{align*}
+  Hence the statement holds by induction.
+\end{proof}
+
+It is worth noting that the well-ordered axiom and Theorem 2.3.3 are equivalent to each other. Indeed, we can prove the well-ordered axiom using the Principle of Induction:
+
+\begin{thmbox}[Well-ordered Axiom]
+   Assume Theorem 2.3.3 is true. Then every nonempty set $S \subseteq \NN$ contains a least element. 
+\end{thmbox}
+\begin{proof}
+   We will prove the contrapositive of this statement: if a set $S \subseteq \NN$ does not have a least element, then $S$ is an empty set. Let $S \subset \NN$ not have a least element. We claim by induction, for all $n \in \NN$, $n \notin S$, i.e. $S = \emptyset$. 
+
+   First consider the base case $n = 0$. Obviously $0 \notin S$ since $0$ is the least element of $\NN$. Now assume that for every $n \in \NN$, $n \notin S$. We have that $n + 1 \notin S$ since it would be the least element in $S$ by the induction hypothesis. So $S = \emptyset$.   
 \end{proof}
 
 

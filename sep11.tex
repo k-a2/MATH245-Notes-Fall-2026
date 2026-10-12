@@ -1,54 +1,118 @@
-\section{September 11th: Compositions of Functions}
-
-\subsection{Compositions of functions}
+\subsection{Compositions of Functions}
 
 \begin{defbox}
-   Let $f \colon X \to Y$ and $g \colon Y \to Z$. The \textbf{composition of $f$ and $g$}, denoted $g \circ f \colon X \to Z$, is the function denoted by $g \circ f := g(f(x))$. 
-\end{defbox}
-
-\begin{example}
-   For $f \colon \NN \to \NN$, $n \mapsto n + 1$ and $g \colon \NN \to \NN$, $n \mapsto n^2$, then $g \circ f := g(f(n)) = g(n+1) = (n+1)^2$, and $f \circ g := f(g(n)) = f(n^2) = n^2 + 1$. 
-\end{example} 
-
-\begin{defbox}
-   We say the function $\text{1}_X \colon X \to X$, $x \mapsto x$ is the \textbf{identity function}.
-\end{defbox}
-
-\begin{defbox}
-   Let $f \colon X \to Y$. Call $g \colon Y \to X$ the \textbf{right inverse of $f$} if $f \circ g = \text{1}_X$ and the \textbf{left inverse of $f$} if $g \circ f = \text{1}_X$. Additionally $g$ is the \textbf{inverse of $f$} if it is both the left and right inverse of $f$.  
+   Let $f \colon X \to Y$ and $g \colon Y \to Z$ be two functions. The \textbf{composition of $f$ and $g$}, denoted $g \circ f \colon X \to Z$, is the function denoted by $g \circ f := g(f(x))$. 
 \end{defbox}
 
 \begin{remark}
-   A composition of functions is associative, that is, if $f \colon X \to Y$, $g \colon Y \to Z$, $h \colon Z \to W$, then $h \circ (g \circ f) = (h \circ g) \circ f$. 
+   A composition of functions is associative, that is, if $f \colon X \to Y$, $g \colon Y \to Z$, $h \colon Z \to W$, then $h \circ (g \circ f) = (h \circ g) \circ f$.
 \end{remark}
 
+\begin{example}
+   For $f \colon \NN \to \NN$, $n \mapsto n + 1$ and $g \colon \NN \to \NN$, $n \mapsto n^2$, then $g \circ f := g(f(n)) = g(n+1) = (n+1)^2$, and $f \circ g := f(g(n)) = f(n^2) = n^2 + 1$. 
+\end{example}
+
 \begin{propbox}
-   For $f \colon X \to Y$, if $g_l \colon Y \to X$ is a left inverse and $g_r \colon Y \to X$ is a right inverse, then $g_l \equiv g_r$ and thus is a two-sided inverse.
+   Let $f \colon X \to Y$, $g \colon Y \to Z$ be two functions and $g \circ f \colon X \to Z$ be their composition. 
+   \begin{enumerate}
+      \item If $g \circ f$ is injective, then $f$ is injective.
+      \item If $g \circ f$ is surjective, then $g$ is surjective.
+   \end{enumerate}
 \end{propbox}
 
 \begin{proof}
-   We can write $g_l = g_l \circ \text{1}_Y = g \circ (f \circ g_r) = (g_l \circ f) \circ g_r = \text{1}_X \circ g_r = g_r$. 
+   First assume $g \circ f$ is injective. Let $x$, $x' \in X$ such that $f(x) = f(x')$. Since $g \circ f$ is injective:
+   \[ (g \circ f)(x) = (g \circ f)(x') \iff g(f(x)) = g(f(x')) \implies x = x' \] 
+   Now assume $g \circ f$ is surjective. Let $z \in Z$ and we want to show there exists a $y \in Y$ such that $g(y) = z$. Since $g \circ f$ is surjective, there exists an $x \in X$ such that $(g \circ f)(x) = z$, i.e. $g(f(x)) = z$. Let $y = f(x)$ and we are done. 
+\end{proof}
+
+\begin{defbox}
+   Let $f \colon X \to Y$. Let $g \colon Y \to X$.
+   \begin{enumerate}
+      \item We say $g$ is the \textbf{right inverse of $f$} if $f \circ g = \text{1}_X$.
+      \item We say $g$ is the \textbf{left inverse of $f$} if $g \circ f = \text{1}_X$.
+      \item We say $g$ is the \textbf{inverse of $f$} (sometimes called a \textbf{two sided inverse of $f$}) if it is both a left and right inverse of $f$.
+   \end{enumerate}
+\end{defbox}
+
+\begin{propbox}
+   Let $f \colon X \to Y$ be a function. If $g_l \colon Y \to X$ is a left inverse and $g_r \colon Y \to X$ is a right inverse, then $g_l \equiv g_r$ and thus is a two-sided inverse.
+\end{propbox}
+
+\begin{proof}
+   We can write:
+   \[ g_l = g_l \circ \text{1}_Y = g \circ (f \circ g_r) = (g_l \circ f) \circ g_r = \text{1}_X \circ g_r = g_r \qedhere \] 
 \end{proof}
 
 \begin{propbox}
-   Let $f \colon X \to Y$, where $X \neq \emptyset$. 
+   Let $f \colon X \to Y$ be a function where $X \neq \emptyset$. 
    \begin{enumerate}
       \item $f$ admits an inverse if and only if $f$ is bijective.
       \item $f$ admits a left inverse if and only if $f$ is injective.
       \item $f$ admits a right inverse if and only if $f$ is surjective.
    \end{enumerate}
 \end{propbox}
+\begin{proof}
+   Left as an exercise in the assignment. 
+\end{proof}
 
-\begin{propbox}
-   If $f \colon X \to Y$ has an inverse, then it is unique and we denote it by $f^{-1} \colon Y \to X$. 
-\end{propbox}
+\begin{remark}
+   If $f \colon X \to Y$ has an inverse, then it is unique and we denote it by $f^{-1} \colon Y \to X$, such that $f^{-1}(y) = x$ if $f(x) = y$. 
+\end{remark}
 
 \subsection{Binary Relations and Equivalence Relations}
 
 \begin{defbox}
-   A \textbf{binary relation} on a set is a an arbitrary subset of $X \times X$. 
+  A \textbf{binary relation} on a set $X$ is a an arbitrary subset of $X \times X$. 
+\end{defbox}
+
+We are interested in a more general class of binary relations:
+
+\begin{defbox}
+   A \textbf{partial order} on a set, denoted $\leq$ is a binary relation where:
+   \begin{enumerate}
+      \item $\leq$ is reflexive: $(x,x) \in \leq$, i.e. $x \leq x$ for all $x \in X$.
+      \item $\leq$ is assymmetric: for all $x$, $y \in X$ such that $x \neq y$,$x \leq y$ but $y \not\leq x$.
+      \item $\leq$ is transitive: for all $x$, $y$, $z \in X$, if $x \leq y$ and $y \leq z$, then $x \leq z$.
+   \end{enumerate}
+\end{defbox}
+\begin{remark}
+   On $\RR$, the usual ``$\leq$" is a partial order; in fact it is a linear, or total order, i.e. for all $x$, $y \in X$, $x \leq y$ and $y \leq x$. 
+\end{remark}
+
+However, the most interesting---and important---class of binary relations are:
+
+\begin{defbox}
+   An \textbf{equivalence relation} on a set $X$ is a binary relation $E$ satisfying:
+   \begin{enumerate}
+      \item Reflexivity: For all $x \in X$, $xEx$ (any element in $X$ is equivalent to itself).
+      \item Symmetry: For all $x$, $y \in X$, if $xEy$, then $yEx$. 
+      \item Transitivity: For all $x$, $y$, $z \in X$, if $xEy$ and $yEz$, then $xEz$. 
+   \end{enumerate}
 \end{defbox}
 
 \begin{example}
-  A 
+   Let $\sim$ be an equivalence relation on $\ZZ$, where $x \sim y$ when $x - y$ is even. This is a valid equivalence relation. Indeed, $x \sim x$ since $x - x = 0$ which is even, so $\sim$ is symmetric. Moreover, if $x \sim y$, i.e. $x - y = b$ for some even $b \in \ZZ$, then $y - x = -(x - y) = -b$ which is still even, so $y \sim x$ and $\sim$ is symmetric. Lastly, if $x \sim y$ and $y \sim z$, i.e. $x - y = b$ and $y - z = c$ where $b$ and $c$ are even integers, then $x - z = (x - y) + (y - z) = b + c$ which is even. So $x \sim z$ thus $\sim$ is transitive. 
 \end{example}
+
+\begin{defbox}
+   Let $E$ be an equivalence relation on a set $X$. For all $x \in X$, the \textbf{$E$-class}, or \textbf{equivalence class} of $x$ is the set
+   \[ [x]_E := \{y \in X \colon xEy\}. \]
+\end{defbox}
+\begin{propbox}
+   Let $\sim$ be an equivalence relation on a set $X$. For all $x$, $y \in X$, the following are true:
+   \begin{enumerate}[(a)]
+      \item $x \sim y \iff [x]_\sim = [y]_\sim$.
+      \item $[x]_\sim$ and $[y]_\sim$ are either disjoint or equal, i.e. either $[x]_\sim = [y]_\sim$ or $[x]_\sim \cap [y]_\sim = \emptyset$. 
+   \end{enumerate}
+\end{propbox}
+\begin{proof}
+   For (a), let us first assume $x \sim y$. Let $z \in [y]_\sim$, so $y \sim z$, so my transitivity $x \sim z$, so $z \in [x]_\sim$, i.e. $[y]_\sim \subseteq [x]_\sim$. By symmetry, we also have $y \sim x$, so analogously we get $[x]_\sim \subseteq [y]_\sim$. Conversely, suppose $[x]_\sim = [y]_\sim$. Then by reflexivity, $y \in [y]_\sim$, thus $y \in [x]_\sim$, hence $x \sim y$. 
+
+   For (b), suppose $[x]_\sim$ and $[y]_\sim$ are not disjoint, i.e. there exists $z \in [x]_\sim \cap [y]_\sim$ and show that $[x]_\sim = [y]_\sim$. By the definition of $z$, so $x \sim z$ and $y \sim z$. By (a), $[x]_\sim = [z]_\sim$ and $[y]_\sim = [z]_\sim$, hence $[x]_\sim = [y]_\sim$. 
+\end{proof}
+
+\begin{defbox}
+   Let $\sim$ be an equivalence relation on a set $X$. The \textbf{quotient of $X$ by $\sim$}, denoted $X / \sim$, is the set of all equivalence classes:
+   \[ X / \sim := \{[x]_\sim \colon x \in X\}. \]
+\end{defbox}

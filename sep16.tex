@@ -1,23 +1,36 @@
 \part{Arithmetic of Integers}
 
-\section{September 16th: Division}
+\section{Division and its Consequences}
+
+\subsection{Divisibility}
 
 \begin{defbox}
    Let $a$, $b \in \ZZ$. We say that \textbf{$a$ divides $b$}, denoted $a \mid b$, if there exists $q \in \ZZ$ such that $b = aq$.
 \end{defbox}
+
+\begin{remark}
+   Definition 5.1.1 differs slightly from our usual assumptions of divisibility. For instance---by this definition---zero divides zero, i.e. $0 \mid 0$, since we can choose $q = 0$ to satisfy $0 = 0$. Obviously we know that $0/0$ is indeterminate.  
+\end{remark}
+
 \begin{propbox}
    Let $a$, $b$, $c \in \ZZ$. The following statements hold:
-   \begin{enumerate}
+   \begin{enumerate}[(a)]
       \item $a \mid b \implies a \mid -b$.
       \item $a \mid b \implies a \mid bc$.
       \item $a \mid b$ and $a \mid c \implies a \mid (b \pm c)$.
       \item $a \mid b$ and $b \mid c \implies a \mid c$.
    \end{enumerate}
 \end{propbox}
-The proofs of each of these statements are very easy by definition.
+\begin{proof}
+   The proof of (a) is trivial (use $-q$). For (b), if $a \mid b$, then there exists a $q \in \ZZ$ such that $b = qa$. Multiply both sides by $c$ and let $r = qc \in \ZZ$, then $a \mid bc$. For (c), we have that there exists $q$ and $r \in \ZZ$ such that $b = qa$ and $c = ra$. So $b \pm c = qa \pm ra = a(r \pm q)$. Let $s := r \pm q \in \ZZ$ and so $a \mid (b \pm c)$. For (d), by assumption there exists $q$ and $r \in \ZZ$ such that $b = qa$ and $c = rb$, so $c = rqa$. Let $s := rq \in \ZZ$, so $a \mid c$.
+\end{proof}
+
+\subsection{Remainders}
+
+However, as we know very well, most numbers do not cleanly divide other numbers. What remains after division is called the \textit{residue}, or more commonly, the \textit{remainder}. The following theorem formalizes this idea.
 
 \begin{thmbox}[Quotient and Remainder Theorem]
-   Let $a$, $b \in \ZZ$ where $b \neq 0$. Then there exists $q$, $r \in \ZZ$ such that $a = bq + r$ and $0 \leq r < |b|$. 
+   Let $a$, $b \in \ZZ$ where $b \neq 0$. Then there exists unique integers $q$, $r \in \ZZ$ such that $a = bq + r$ and $0 \leq r < |b|$. 
 \end{thmbox}
 \begin{proof}
    We must show existence and uniqueness of $q$ and $r$ in this proof. We begin by showing that $q$ and $r$ exist. Define:
@@ -44,9 +57,23 @@ The proofs of each of these statements are very easy by definition.
    which contradicts that $0 \leq r' < |b|$.
 \end{proof}
 
+We often denote the remainder $r$ of two integers $a$ and $b$ as $\text{rem}(a,b)$. 
+
+\begin{example}
+   Let $a = -7$ and $b = 3$. By Theorem 5.1.4, there exists unique $q$ and $r \in \ZZ$ such that:
+   \[ -7 = 3q + r \]
+   where $r \in [0, |b|)$. Indeed, the unique representation is:
+   \[ -7 = 3 \cdot (-3) + 2 \] 
+   This implies $\text{rem}(-7, 3) = 2$. 
+\end{example}
+
+\begin{remark}
+   $\text{rem}(a,b) = \text{rem}(a, -b)$ since $a = bq + r = (-b)(-q) + r$. However, $\text{rem}(a,b) \neq \text{rem}(-a, b)$. Indeed, $\text{rem}(7, 3) = 1$ because $7 = 3 \cdot 2 + 1$, but as seen in Example 5.1.5, $\text{rem}(-7, 3) = 2$.
+\end{remark}
+
 \begin{corrbox}
    Let $a$, $b \in \ZZ$ and $b \neq 0$. Then $b \mid a$ if and only if the remainder of $a$ and $b = 0$. 
 \end{corrbox}
 \begin{proof}
-  For the forwards direction, assume $b \mid a$, then we havee $a = bq$ for some $q \in \ZZ$, thus $a = bq + 0$, so by the uniqueness of such a representation, the remainder is 0. Conversely, suppose the remainder is zero, then for $a = bq + r$, if $r = 0$, $a = bq$ which immediately implies $b \mid a$.  
+  For the forwards direction, assume $b \mid a$, then by definition we have $a = bq$ for some $q \in \ZZ$. Thus $a = bq + 0$, so by the uniqueness of such a representation by Theorem 5.1.4, the remainder is zero. Conversely, suppose the remainder is zero, then for $a = bq + r$, if $r = 0$, $a = bq$ which immediately implies $b \mid a$.
 \end{proof}
