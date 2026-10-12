@@ -13,7 +13,7 @@
 \end{thmbox}
 
 \begin{proof}
-   We first prove $d = ua + vb$. Let $S := \{ma + nb \colon m, n \in \ZZ, ma + nb \geq 1 \}$. Note that $S \neq \emptyset$ because $a\sgn(a) + b\sgn(b) = |a| + |b| \geq 1$. By the well ordering property of $\NN$, there is a least element $ua + vb \in S$. In particular, define $D := ua + vb \geq 1$. Since $d \mid a$ and $d \mid b$, $d \mid D$, thus $d \leq D$. To show $D \leq d$, it suffices to show that $D \mid a$ and $D \mid b$ by the definition of the GCD. Write $a = Dq + r$ for $r \in [0, D)$, then we write:
+   We first prove $d = ua + vb$. Let $S := \{ma + nb \colon m, n \in \ZZ, ma + nb \geq 1 \}$. Note that $S \neq \emptyset$ because $a\sgn(a) + b\sgn(b) = |a| + |b| \geq 1$ and so is an element of $S$. By the well ordering property of $\NN$, there is a least element $ua + vb \in S$. In particular, define $D := ua + vb \geq 1$. We want to show $D = d$. Since $d \mid a$ and $d \mid b$, $d \mid D$, thus $d \leq D$. To show $D \leq d$, it suffices to show that $D \mid a$ and $D \mid b$ by the definition of the GCD. Write $a = Dq + r$ for $r \in [0, D)$, then we write:
    \begin{align*}
       r &= a - Dq \\
         &= a - uqa = vqb \\
@@ -21,7 +21,7 @@
    \end{align*}
    But $r < D$ so if $r \neq 0$, then $r \in S$, which contradicts the choice of $D$. By the same argument, $D \mid b$ and $D \mid a$, so $D \leq d$ which implies $D = d$. 
 
-   Now let $d' \mid a$ and $d' \mid b$ for some $d' \in \ZZ^+$. Then $d' \mid d$ since $d = ua + vb$. 
+   Now let $d' \mid a$ and $d' \mid b$ for some $d' \in \ZZ^+$. Then $d' \mid d$ since $d = ua + vb$. So $d = \gcd(a,b)$.
 \end{proof}
 
 \begin{corrbox}
@@ -33,7 +33,7 @@
 
 \subsection{The Euclidean Algorithm}
 
-How do we find the GCD of two integers $a$ and $b$. One way is to brute force through all positive integers less than or equal to $\min(|a|, |b|)$, but this would take $\min(|a|, |b|)$ steps. A much more effective algorithm, which takes $\log_2 \min(|a|, |b|)$ steps, is known as the \textit{Euclidean Algorithm} and was discovered over 2300 years ago. 
+How do we find the GCD of two integers $a$ and $b$? One way is to brute force through all positive integers less than or equal to $\min(|a|, |b|)$, but this would take $\min(|a|, |b|)$ steps. A much more effective algorithm, which takes $\log_2 \min(|a|, |b|)$ steps, is known as the \textit{Euclidean Algorithm} and was discovered over 2300 years ago. It can be easily used to calculate the GCD of two very large numbers. 
 
 Here is how we use the Euclidean algorithm to find the GCD of two positive integers $a$, $b$ with $a \geq b$. We write:
 \begin{align*}
@@ -43,7 +43,7 @@ Here is how we use the Euclidean algorithm to find the GCD of two positive integ
    \vdots \\ 
    r_{t-1}&= r_tq_{t + 1} + r_{t+1}
 \end{align*}
-Let $t \in \NN$ such that $r_{t + 1} = 0$. Then $r_t = \gcd(a,b)$
+Let $t \in \NN$ such that $r_{t + 1} = 0$. Then $r_t = \gcd(a,b)$.
 
 \begin{example}
    Find $\gcd(111,51)$ using the Euclidean algorithm.
@@ -56,7 +56,7 @@ Let $t \in \NN$ such that $r_{t + 1} = 0$. Then $r_t = \gcd(a,b)$
       9 &= 1 \cdot 6 + 3 \\
       6 = 2 \cdot \mathbf{3} + 0
    \end{align*}
-   Hence $\gcd(111,51) = 3$. We can also use this algorithm to write $3$ as a linear combination of $111$ and $51$ (in the form $3 = ua + vb$ using backwards substitution as follows:
+   Hence $\gcd(111,51) = 3$. We can also use this algorithm to write $3$ as a linear combination of $111$ and $51$ (in the form $3 = ua + vb$ using back substitution as follows:
    \begin{align*}
       3 &= 9 - 6 \\
         &= 9 - 51 + 9 \cdot 5 \\
@@ -69,7 +69,7 @@ Let $t \in \NN$ such that $r_{t + 1} = 0$. Then $r_t = \gcd(a,b)$
 We can prove that the Euclidean algorithm returns $\gcd(a,b)$ by using recursion. Write:
 \[ \text{Euc}(a,b) := \begin{cases} b \text{ if } b \mid a \\ \text{Euc}(b, \text{rem}(a,b)) \text{ otherwise}
 \end{cases}\]
-where $\text{rem}(a,b)$ is the remainder of $a$ and $b$. It suffices to prove the following lemma:
+where $\text{rem}(a,b)$ is the remainder of $a$ and $b$. Now to prove the Euclidean algorithm, it suffices to prove the following lemma:
 
 \begin{lemmabox}
    For $a$, $b \in \NN^+$, with $a \geq b$, $\gcd(a,b) = \gcd(b, \text{rem}(a,b))$. 

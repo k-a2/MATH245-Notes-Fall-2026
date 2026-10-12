@@ -1,18 +1,20 @@
-\section{Prime Numbers}
+\section{Prime Numbers and Unique Factorization}
 
 \subsection{Primes}
 
 \begin{defbox}
-   An integer $p \in (\ZZ \setminus \{0, \pm 1\}$ is said to be \textbf{prime} if its only divisors are $1$ and $p$. A \textbf{prime number} is a natural number which is prime, i.e. a number $p \geq 2$ such that its divisors are $1$ and $p$. 
+   An integer $p \in (\ZZ \setminus \{0, \pm 1\}$ is said to be \textbf{prime} if its only divisors are $1$, $-1$, $p$, and $-p$. A \textbf{prime number} is a natural number which is prime, i.e. a number $p \geq 2$ such that its only divisors are $1$ and $p$. 
 \end{defbox}
 
 Note that by definition, $1$ is not a prime number. 
 
+Prime numbers have very important and unique properties and are thus of great interest to the math world. Indeed some of the most famous unsolved problems, such as the twin primes conjecture, are centred around prime numbers. Finding prime numbers is also of great interest; indeed finding the largest known prime number can yield one a (fairly) hefty sum of cash. 
+
 \subsection{The Sieve of Eratosthenes}
 
-To find prime numbers, we can use the \textit{Sieve of Eratosthenes}, which is a slow but reliable algorithm to find all prime numbers from $2$ to a natural number $N$. 
+To find prime numbers, we can use the \textit{Sieve of Eratosthenes}, which is a slow and literally ancient, yet reliable algorithm to find all prime numbers from $2$ to a natural number $N$.
 
-Suppose, for sake of exposition, we want to find all the prime numbers between $2$ and $50$. We first write out all numbers between $2$ and $50$:
+Suppose, for sake of exposition, we want to find all the prime numbers between $2$ and $N = 50$. We first write out all numbers between $2$ and $50$:
 \[
 \begin{array}{rrrrrrrrr}
 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
@@ -55,7 +57,7 @@ Now, we move to highlight the next smallest number: $3$. We now cross out all mu
 47 & \cancel{48} & \cancel{49} & \cancel{50}
 \end{array}
 \]
-The next smallest number, $4$, has been crossed out (hence is not prime), so we move to highlight $5$, which is prime. We now cross out all multiples of $5$:
+The next smallest number, $4$, has been crossed out (hence is not prime), so we move to the next lowest number, $5$, which is prime. We now cross out all multiples of $5$:
 \[
 \begin{array}{rrrrrrrrr}
 \boxed{2} & \boxed{3} & \cancel{4} & \boxed{5} & \cancel{6} & 7 &
@@ -82,116 +84,50 @@ Continuing this algorithm until all numbers have been either crossed out or high
 \subsection{Properties of Prime Numbers}
 
 \begin{thmbox}[Characterisation of Primes]
-   Let $p \geq 2$ be a natural number. $p$ is prime if and only if for all $a$, $b \in \ZZ$, if $p \mid ab$, then $p \mid a$ or $p \mid b$. 
+   Let $p \geq 2$ be a natural number. $p$ is a prime number if and only if for all $a$, $b \in \ZZ$, if $p \mid ab$, then $p \mid a$ or $p \mid b$. 
 \end{thmbox}
 \begin{proof}
-   Assume that $p$ is prime and that for all $a$, $b \in \ZZ$, $p \mid ab$. Assume $p \nmid a$, then $\gcd(a,p) = 1$ since $p$ is prime. Thus, by Corollary 8.1.3, $p \mid b$. Conversely, suppose that for all $a$, $b \in \ZZ$, $p \mid ab$ implies $p \mid a$ and $p \mid b$. We suppose $p = st$ for some $s$, $t \in \NN^+$ and show that $s = 1$ or $t = 1$. Since $p \mid st$, $p \mid s$, or $p \mid t$, say $p \mid s$. Then $s = ps'$ hence $p = st = s't$ so $s't = 1$, hence $s' = t = 1$. 
+   Assume that $p$ is prime and that for all $a$, $b \in \ZZ$, $p \mid ab$. Assume $p \nmid a$, then $\gcd(a,p) = 1$ since $p$ is prime. Thus, by Corollary 6.1.3, $p \mid b$. The same logic works analogously if we assume $p \nmid b$. Conversely, suppose that for all $a$, $b \in \ZZ$, $p \mid ab$ implies $p \mid a$ and $p \mid b$. We suppose $p = st$ for some $s$, $t \in \NN^+$ and show that $s = 1$ or $t = 1$. Since $p \mid st$, $p \mid s$, or $p \mid t$, say $p \mid s$. Then $s = ps'$ hence $p = st = s't$ so $s't = 1$, hence $s' = t = 1$. 
 \end{proof}
 
 \begin{corrbox}
-   If $p \geq 2$ is prime and $p \mid a_1a_2\dots a_n$ for $a_1, \dots, a_n \in \ZZ$, then there exists an $i \leq n$ such that $p \mid ai$.
+   If $p \geq 2$ is prime and $p \mid a_1a_2\dots a_n$ for $a_1, \dots, a_n \in \ZZ$, then there exists an $i \leq n$ such that $p \mid a_i$.
 \end{corrbox}
 \begin{proof}
-   Can be done trivially by induction of $n$ using the Characterisation of Primes. 
+   We proceed by induction on $n$. If $n = 1$, then the statement $p \mid a_1$ holds with $i = 1$. Now suppose the statement holds for $n$ integers, i.e. $p \mid a_1a_2\dots a_n$. Suppose $p \mid a_1a_2\dots a_na_{n+1}$. We can write this as:
+   \[  p \mid (a_1a_2\dots a_n)a_{n+1} \]
+   Since $p$ is prime, we have by Theorem 7.3.2 that $p \mid (a_1a_2 \dots a_n)$ or $p \mid a_{n+1}$. If $p \mid a_{n+1}$ we are done. Otherwise, by the induction hypothesis, we have that there exists an $i \leq n$ such that $p \mid a_i$. Thus the statement holds by induction. 
 \end{proof}
 
 \begin{thmbox}
-   Every natural number $n \geq 1$ is a product of primes.
+   Every natural number $n \geq 2$ is a product of primes.
 \end{thmbox}
 \begin{proof}
-   Shown in homework.
+   We proceed by complete induction on $n$. The base case $n = 2$ is trivial as $2$ is a prime number.  For the inductive step, let $k \geq 2$ and assume that every $2 \leq n \leq k$ can be written as a finite product of prime numbers. We want to show that $k + 1$ can be written as a product of primes. Without loss of generality assume $k + 1$ is composite. By definition of divisibility, $k + 1$ can be written as the product of two natural numbers $a$ and $b$ where $a$, $b \geq 2$. By the induction hypothesis, we can write both $a$ and $b$ as a finite product of prime numbers, hence $k + 1$ can be written as the product of finitely many prime numbers.   
 \end{proof}
 
 \begin{corrbox}
    Every natural number $n \geq 2$ is divisible by a prime.
 \end{corrbox}
 \begin{proof}
-   TBD.
+   Analogous to the proof of Theorem 7.3.4. 
 \end{proof}
 
-\begin{corrbox}[Infinitude of Primes]
+\begin{corrbox}
    There are infinitely many prime numbers.
 \end{corrbox}
 \begin{proof}
-   Suppose by contradictoion that there are finitely many primes $p_1$, $\dots$, $p_k$ for some $k \geq 1$. Let $n := p_1p_2\dots p_k + 1$. Then there is a prime $q \mid n$ by the previous corrolary, so $q = p_i$ for some $i \in \{1, \dots, k\}$ since $p_1, \dots, p_k$ are all the primes. But then $1 = n - p_1\dots p_k$ is divisible by $q = p_i$ since $q \mid a$ and $q \mid p_1 \dots p_k$, which is a contradiction.
+   Suppose by contradiction that there are finitely many primes $p_1$, $\dots$, $p_k$ for some $k \geq 1$. Let $n := p_1p_2\dots p_k + 1$. By Corollary 7.3.5, there exists a prime number $q$ such that $q \mid n$, hence so $q = p_i$ for some $i \in \{1, \dots, k\}$ since $p_1, \dots, p_k$ are all the primes. But then $1 = n - p_1\dots p_k$ is divisible by $q = p_i$ since $q \mid a$ and $q \mid p_1 \dots p_k$, which is a contradiction.
 \end{proof}
 
 \begin{thmbox}[Fundamental Theorem of Arithmetic]
-   Every nonzero integer $n$ is a unique product of prime integers, i.e. $n = \sigma p_1\dots p_k$, where $\sigma = \pm 1$ and $2 \leq q_1 \leq \dots \leq q_k$ are primes.
+   Every nonzero integer $n$ is a unique product of prime integers, i.e. $n = \sigma p_1\dots p_k$, where $\sigma = \pm 1$ and $2 \leq p_1 \leq \dots \leq p_k$ are primes.
 \end{thmbox}
 \begin{proof}
-   The existence of such a representation follows from Theorem 9.3.4. We only need to show the uniqueness of such a representation.
+   The existence of such a representation follows from Theorem 7.3.4. We only need to show that this representation is unique. 
 
    Let $\sigma p_1 \dots p_k = n = \sigma' q_1 \dots q_m$ where $p_i$ and $p_j$ are prime numbers ordered $2 \leq p_1 \leq \dots \leq p_k$ and $2 \leq q_1 \leq \dots \leq q_m$. The sign must be the same, i.e. $\sigma = \sigma'$, so assume without loss of generality that $n \geq 0$ and $p_1 \dots p_k = n = q_1 \dots q_m$. We prove that $k = m$ and $p_i = q_i$ for all $1 \leq i \leq k$. We can show this holds by strong induction on $n \geq 1$.
 
-   If $n = 1$, then $k = 0 = m$ and we are done. If we suppose $n \geq 2$, then $k$, $m \geq$ and without loss of generality suppose $p_1 \leq q_1$. Then $p_1 \mid q_1 \dots q_m$ so $p_i \mid q_j$ for some $1 \leq j \leq m$. But $q_j$ is prime so $p_1 = q_j$. Since $q_1 \leq \dots q_j$ and $p_1 \leq q_1$, we get $p_1 = q_1 = \dots = q_j$, so $n' := p_2p_3\dots p_k = q_2q_3 \dots q_m$. By the induction hypothesis on $n'$, we get $k = m$ and $p_i = q_i$ for all $i \in [2, k]$, hence $k = m$ and $p_i = q_i$ for all $i \in [1,k]$, whence the representation is unique.
-\end{proof}
-
-\begin{propbox}
-   Any non-zero rational number $q$ can be written as
-   \[
-   q = \sigma p_1^{a_1} \dots p_m^{a_m},
-   \]
-   where $\sigma = \pm 1$, the $p_i$ are distinct prime numbers, and
-   $a_1, \dots, a_m$ are non-zero integers, possibly negative. Moreover,
-   this expression is unique up to reordering the primes.
-\end{propbox}
-
-\begin{proof}
-   Since $q$ is rational, there exists $a$, $b \in \ZZ$ with $b \neq 0$ such that
-   \[
-   q = \frac{a}{b}.
-   \]
-   By the Fundamental Theorem of Arithmetic, we can write
-   \[
-   a = \sigma_a r_1^{s_1} \dots r_n^{s_n},
-   \qquad
-   b = \sigma_b r_1^{t_1} \dots r_n^{t_n},
-   \]
-   where $\sigma_a, \sigma_b \in \{-1,1\}$, the $r_i$ are distinct prime
-   numbers, and $s_i, t_i$ are non-negative integers. We allow some of the
-   exponents to be zero so that the same list of primes can be used in both
-   factorizations. Therefore,
-   \[
-   q = \frac{\sigma_a}{\sigma_b}
-   r_1^{s_1-t_1}\dots r_n^{s_n-t_n}.
-   \]
-   Omitting the primes for which $s_i-t_i=0$, and calling the remaining
-   primes $p_1,\dots,p_m$, we obtain
-   \[
-   q = \sigma p_1^{a_1}\dots p_m^{a_m},
-   \]
-   where $\sigma=\sigma_a/\sigma_b \in \{-1,1\}$ and each $a_i$ is a
-   non-zero integer.
-
-   Now suppose that we have two such expressions for $q$. By allowing zero
-   exponents, it is enough to consider
-   \[
-   q = \sigma p_1^{a_1}\dots p_m^{a_m}
-   = \sigma' p_1^{a'_1}\dots p_m^{a'_m},
-   \]
-   where the $p_i$ are distinct prime numbers. Since $\sigma$ and $\sigma'$
-   determine the sign of $q$, we must have $\sigma=\sigma'$. Dividing through
-   by the second expression gives
-   \[
-   1 = p_1^{c_1}\dots p_m^{c_m},
-   \]
-   where $c_i=a_i-a'_i$. We need to show that $c_i=0$ for all $i$.
-
-   By reordering the primes, we may assume that $c_1,\dots,c_t$ are
-   negative and that $c_{t+1},\dots,c_m$ are non-negative. Hence,
-   \[
-   p_1^{-c_1}\dots p_t^{-c_t}
-   =
-   p_{t+1}^{c_{t+1}}\dots p_m^{c_m}.
-   \]
-   Both sides are now products of primes with non-negative exponents. By
-   unique factorization for integers, and since all the primes are distinct,
-   every exponent must be zero. Thus $c_i=0$ for all $i$, so
-   \[
-   a_i=a'_i
-   \]
-   for all $i$. Therefore, the expression is unique up to reordering the
-   primes.
+   If $n = 1$, then $k = 0 = m$ and we are done. If we suppose $n \geq 2$, then $k$, $m \geq 1$ and without loss of generality suppose $p_1 \leq q_1$. Then $p_1 \mid q_1 \dots q_m$,  so $p_i \mid q_j$ for some $1 \leq j \leq m$. But $q_j$ is prime so $p_1 = q_j$. Since $q_1 \leq \dots q_j$ and $p_1 \leq q_1$, we get $p_1 = q_1 = \dots = q_j$, so $n' := p_2p_3\dots p_k = q_2q_3 \dots q_m$. By the induction hypothesis on $n'$, we get $k = m$ and $p_i = q_i$ for all $i \in [2, k]$, hence $k = m$ and $p_i = q_i$ for all $i \in [2,k]$, whence the representation is unique.
 \end{proof}
 
