@@ -1,0 +1,52 @@
+\section{October 21 Notes: Permutation Groups, Cyclic Permuations}
+
+\begin{propbox}
+    There are exactly $n!$ permutations of a set of cardinality $n$, i.e. $|S_n| = n!$.
+\end{propbox}
+\begin{proof}
+    Let $X = \{1, dots, n\}$ and $\sigma \in S_n$ be a permutation on $X$. Since $\sigma$ is in bijection with $(\sigma(1), \dots, \sigma(n))$, we have that $|S_n|$ is equal to the number of reorderings of $\{1, \dots, n\}$. Thus the total number of possible reorderings is
+    \[ n \cdot (n-1) \cdot (n-2) \cdot \dots \cdot 1 = n! \qedhere \]
+\end{proof}
+
+\begin{defbox}
+    For a permutation $\sigma \in S_n$ we define its \bold{support}, denoted $\supp{\sigma}$, to be the set of all elements $\{1, \dots, n\}$ which are not fixed by $\sigma$, i.e.
+    \[ \supp{\sigma} := \{ k \in \{1, \dots, n\}  \sigma(k) \neq k\}. \] 
+
+    We say two permutations $\sigma$, $\tau \in S_n$ are \textbf{disjoint} if $\supp{\sigma} \cap \supp{\tau} = \emptyset$. 
+\end{defbox}
+
+\begin{remark}
+    Note that $\supp{\sigma}$ is $\sigma$-invariant---that is---if $x \in \supp{\sigma}$, then $\sigma(x) \in \supp{\sigma}$. 
+\end{remark}
+
+\begin{propbox}
+    If $\sigma$, $\tau \in S_n$ have disjoint supports, then $\sigma\circ\tau = \tau\circ\sigma$, i.e. the permutations commute.
+\end{propbox}
+
+\begin{proof}
+    Let $i \in \{1, \dots, n\}$. If $i \notin \supp{\sigma} \cup \supp{\tau}$, then $(\sigma \circ \tau)(i) = \sigma(\tau(i)) = \sigma(i) = i$ and similarly, $(\tau \circ \sigma)(i) = \tau(\sigma(i)) = \tau(i) = i$. If $i \in \supp{\sigma}$, then $i \notin \supp{\tau}$, so $(\sigma \circ \tau)(i) = \sigma(\tau(i)) = \sigma(i)$ and $(\tau \circ \sigma)(i) = \tau(\sigma(i)) = i$ by Remark X.X.X, hence $\sigma(i) \notin \supp{\tau}$. The case where $i \in \supp{\tau}$ follows analogously.  
+\end{proof}
+
+\begin{example}
+    Let $X$ be a set and $Y \subseteq X$. Define two subgroups of $Y$:
+    \begin{enumerate}
+        \item $F_Y := \{\sigma \in S_X : Y \cap \supp{\sigma} = \emptyset\} = \{\sigma \in S_X : \forall y \in Y, \sigma(y) = y\}$. Clearly $F_Y$ is closed under composition, inverses, and contains $\text{Id}_X$. 
+        \item $I_Y := \{\sigma \in S_X : \sigma{Y} = Y\}$. This is also clearly a subgroup of $S_X$.
+    \end{enumerate}
+    Remark that $F_Y \leq I_Y \leq S_X$, however if $|Y| > 1$, then $F_y \nleq I_Y$. 
+\end{example}
+
+\begin{defbox}
+    A permutation $\sigma \in S_n$ is called a \textbf{cycle} if it permutes its support ``cyclically,'' i.e. we can order $\supp{\sigma} = \{a_0, a_1, \dots, a_{l-1}\}$ such that $\sigma(a_i) = a_{i+1 \pmod{l}}$ for all $0 \leq i < l$. We write a cyclic permutation $\sigma$ as:
+    \[ \sigma = (a_0, a_1, \dots, a_{l-1}) \]
+    where $l$ is the \textbf{length} of the cycle. 
+\end{defbox}
+
+If $l = 0$, $\sigma$ is called the \textit{trivial cycle}, where $\sigma = \text{Id}_n$. 
+
+\begin{remark}
+    For any cycle $\sigma \in S_n$,
+    \[ (a_0, a_1, \dots, a_{l-1}) = (a_1, \dots, a_{l-1}, a_0) = (a_i, a_{l-1}, , a_0, \dots, a_{i-1}). \]
+\end{remark}
+
+

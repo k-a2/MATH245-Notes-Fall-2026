@@ -81,3 +81,18 @@ Intuitively, we can think of functions as mapping elements from one set to a uni
 \begin{example}
    The function $f \colon \RR \to \RR$ defined by $f(x) := x^2$ is neither injective nor surjective, The function $g \colon \RR \to [0, \infty)$, $g(x) := x^2$ is surjective but not injective, as $f(1) = f(-1)$ but $1 \neq -1$. The function $h \colon [0, \infty) \to [0, \infty)$ defined by $h(x) := x^2$ is both injective and surjective, hence it is bijective. 
 \end{example}
+
+
+\subsection{Cardinality}
+
+Cardinality measures how many elements are in a set, whether finite or not. We denote the cardinality of a set $S$ as $|S|$. 
+
+\begin{defbox}
+   A set $A$ is said to be \textbf{finite} if there exists an $n \in \NN$ such that the function $f \colon A \to \{0, 1, \dots, n - 1\}$ is bijective. Otherwise, $A$ is said to be \textbf{infinite}. 
+\end{defbox}
+
+\begin{remark}
+   If $A$ is finite, then it follows from the pigeonhole principle that $A$ is in bijection with a unique natural number. That is, if $f \colon A \to \{0, 1, \dots, n - 1\}$ and $g \colon A \to \{0, 1 \dots, m - 1\}$ are bijections, then $m = n$. The value of this unique natural number is the cardinality of $A$, i.e $|A| = n$.
+\end{remark}
+
+

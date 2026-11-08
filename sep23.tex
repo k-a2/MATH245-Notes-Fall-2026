@@ -1,60 +1,17 @@
-\section{September 23: More Prime Numbers and Intro to Modular Arithmetic}
-
-\subsection{More Results of Prime Numbers}
+\subsection{Corollaries of the Fundamental Theorem of Arithmetic}
 
 \begin{corrbox}
    Every integer $n$ can be written as $n = \sigma p_1^{a1} \dots p_k^{ak}$ for some $\sigma = \pm 1$, $k \geq 0$, and distinct primes $p_1 \dots p_k \in \NN$, and positive $a_1, \dots, a_k \in \NN$. Such a representation is unique up to reordering the $p_1 < \dots < p_k$. 
 \end{corrbox}
 
-This corrolary is just a restatement of the Fundamental Theorem of Arithmetic.
+This corollary is just a restatement of the Fundamental Theorem of Arithmetic, so nothing need be proven.
 
 \begin{corrbox}
-   Every rational $q = \sigma p_1^{a1} \dots p_k^{ak}$ for some $\sigma = \pm 1$, $k \geq 0$, distinct primes $p_1, \dots, p_k \in \NN$, and nonzero $a_1, \dots a_k \in \ZZ$. Suhc a representation is unique up to reordering the $p_1 < \dots < p_k$. 
+   Every rational number $q$ can be written as $q = \sigma p_1^{a1} \dots p_k^{ak}$ for some $\sigma = \pm 1$, $k \geq 0$, distinct primes $p_1, \dots, p_k \in \NN$, and nonzero $a_1, \dots a_k \in \ZZ$. Such a representation is unique up to reordering the $p_1 < \dots < p_k$. 
 \end{corrbox}
 
 \begin{proof}
-   The existence folows immediately from the existence of the corollary above by writing $q = m/n$ where $m \in \ZZ$ and $n \in \NN^+$. To show uniqueness, we prove the special case: if $1 = r_1{c1} \dots r_l^{cl}$ where $l \geq 0$, $r_1 \dots r_n$ are distinct prime numbers in $\NN$ and $c_1 \dots c_l \in \ZZ$ then for all $i \leq l$, $c_i = 0$. Indeed, if we suppose by contradiction that there exists an $i \leq l$ with $c_i \neq 0$, in particular $l \geq 1$. By removing those $r_j^{cj}$ where $c_j = 0$, we may assume without loss of generality that $c_i \neq 0$ for all $i \leq l$. By rearranging the $r_j$, we may assume without loss of generality that $c_1, \dots c_l < 0$ and $c_{l + }$
-\end{proof}
-
-<BS>
-\begin{propbox}
-   Any non-zero rational number $q$ can be written as
-   \[
-   q = \sigma p_1^{a_1} \dots p_m^{a_m},
-   \]
-   where $\sigma = \pm 1$, the $p_i$ are distinct prime numbers, and
-   $a_1, \dots, a_m$ are non-zero integers, possibly negative. Moreover,
-   this expression is unique up to reordering the primes.
-\end{propbox}
-
-\begin{proof}
-   Since $q$ is rational, there exists $a$, $b \in \ZZ$ with $b \neq 0$ such that
-   \[
-   q = \frac{a}{b}.
-   \]
-   By the Fundamental Theorem of Arithmetic, we can write
-   \[
-   a = \sigma_a r_1^{s_1} \dots r_n^{s_n},
-   \qquad
-   b = \sigma_b r_1^{t_1} \dots r_n^{t_n},
-   \]
-   where $\sigma_a, \sigma_b \in \{-1,1\}$, the $r_i$ are distinct prime
-   numbers, and $s_i, t_i$ are non-negative integers. We allow some of the
-   exponents to be zero so that the same list of primes can be used in both
-   factorizations. Therefore,
-   \[
-   q = \frac{\sigma_a}{\sigma_b}
-   r_1^{s_1-t_1}\dots r_n^{s_n-t_n}.
-   \]
-   Omitting the primes for which $s_i-t_i=0$, and calling the remaining
-   primes $p_1,\dots,p_m$, we obtain
-   \[
-   q = \sigma p_1^{a_1}\dots p_m^{a_m},
-   \]
-   where $\sigma=\sigma_a/\sigma_b \in \{-1,1\}$ and each $a_i$ is a
-   non-zero integer.
-
-   Now suppose that we have two such expressions for $q$. By allowing zero
+   The existence of such a representation follows immediately from Corollary 8.1.1 by writing $q = a/b$ where $a \in \ZZ$ and $b \in \NN^+$. To show uniqueness, suppose there are two such expressions for $q$. By allowing zero
    exponents, it is enough to consider
    \[
    q = \sigma p_1^{a_1}\dots p_m^{a_m}
@@ -66,10 +23,7 @@ This corrolary is just a restatement of the Fundamental Theorem of Arithmetic.
    \[
    1 = p_1^{c_1}\dots p_m^{c_m},
    \]
-   where $c_i=a_i-a'_i$. We need to show that $c_i=0$ for all $i$.
-
-   By reordering the primes, we may assume that $c_1,\dots,c_t$ are
-   negative and that $c_{t+1},\dots,c_m$ are non-negative. Hence,
+   where $c_i=a_i-a'_i$. We need to show that $c_i=0$ for all $i$.  By reordering the primes, we may assume that $c_1,\dots,c_t$ are  negative and that $c_{t+1},\dots,c_m$ are non-negative up to some $t$. Hence
    \[
    p_1^{-c_1}\dots p_t^{-c_t}
    =
@@ -77,11 +31,67 @@ This corrolary is just a restatement of the Fundamental Theorem of Arithmetic.
    \]
    Both sides are now products of primes with non-negative exponents. By
    unique factorization for integers, and since all the primes are distinct,
-   every exponent must be zero. Thus $c_i=0$ for all $i$, so
-   \[
-   a_i=a'_i
-   \]
-   for all $i$. Therefore, the expression is unique up to reordering the
-   primes.
+   every exponent must be zero. Thus $c_i=0$ for all $i$, so $a_i=a'_i$
+   for all $i$, whence the expression is unique. 
 \end{proof}
 
+Recall in Proposition 2.1.1, we proved that $\sqrt{2}$ is an irrational number by contradiction. We can prove the same result in a similar way using the Fundamental Theorem of Arithmetic:
+
+\begin{propbox}
+   $\sqrt{2} \notin \QQ$. 
+\end{propbox}
+\begin{proof}
+   Suppose $\sqrt{2} \in \QQ$, so by Corollary 8.1.2, we have:
+   \[ \sqrt{2} = p_1^{a_1}\dots p_k^{a_k} \]
+   where the $p_i$'s are distinct primes and the $a_i$'s are all nonzero integers. Squaring both sides yields:
+   \[ 2 = p_1^{2a_1}\dots p_k^{2a_k} \]
+   Since $2$ is a prime number, the uniqueness of this representation implies that $k = 1$ and $2a_1 = 1$, so $a_1 = 1/2$, contradicting $a_1$ being an integer. 
+\end{proof}
+\begin{remark}
+   The above proof can be easily tweaked to show many numbers are not irrational, such as $\sqrt{3}$. 
+\end{remark}
+
+\part{Modular Arithmetic of Integers}
+
+\section{Congruence and Modular Arithmetic}
+
+\subsection{Defining Congruence}
+
+Let $n \in \NN^+$, and let us define a relation for $a$, $b \in \ZZ$, denoted $a \equiv_n b$ if $n \mid (a - b)$. Throughout this section, we will write this as:
+\[ a \equiv b \pmod{n} \]
+We say that \textbf{$x$ is congruent to $y$ modulo $n$}. 
+
+\begin{lemmabox}
+   The relation $a \equiv b \pmod{n}$ defined above is an equivalence relation on $\ZZ$, and the $\{0, 1, \dots, n - 1\}$ is its transversal, i.e. the quotient is:
+   \[ \ZZ/n\ZZ := Z/\equiv_n = \{\overline{0}, \overline{1}, \dots, \overline{n-1}\} \] 
+   where $\overline{i}$ denoted the $\equiv_n$-class $[i]_{\equiv_n}$.
+\end{lemmabox}
+\begin{proof}
+   For any $a \in \ZZ$, $a \equiv a \pmod{n}$ since $n \mid (a - a)$. Secondly, for all $a$, $b \in \ZZ$, if $n \mid (x - y)$, then $n \mid -(x - y)$ by Proposition 5.1.3, so the relation is symmetric. Lastly, if $n \mid (x-y)$ and $n \mid (y - z)$, then again by Proposition 5.1.3 $n \mid (x - y + y - z) = n \mid (x -z)$, hence the relation is transitive. 
+
+   Now let $c \in \ZZ$ and write $c = qn + r$ with $r \in [0, n)$. Then $c - r = qn$, so $c \equiv r \pmod{n}$. It follows that all equivalence classes are representated by some $r \in \{0, 1, \dots, n - 1\}$. Moreover, the equivalence classes defined by elements of $\{0, 1, \dots, n - 1\}$ are disjoint. Indeed, if they are not, then for some $i < j$ where $0 \leq 1 < j < n$, $i \equiv j \pmod{n}$, i.e. $n \mid (j - i)$. But since $0 < j - i < n$, we get a contradiction. 
+\end{proof}
+
+\begin{thmbox}
+  Let $n \geq 2$ be a natural number. For all $a$, $b \in \ZZ$, define the binary operations $+$ and $\cdot$ on $\ZZ/n\ZZ$ as follows:
+  \begin{align*}
+  &\overline{a} + \overline{b} := \overline{a + b} \\
+  &\overline{a} \cdot \overline{b} := \overline{ab}
+  \end{align*}
+   These operations are well defined and make $\ZZ/n\ZZ$ a commutative ring---that is---the following properties hold for all $\overline{a}$, $\overline{b}$, $\overline{c} \in \ZZ/n\ZZ$:
+   \begin{enumerate}[(1)]
+      \item Associativity: $\ol{a} + (\ol{b} + \ol{c}) = (\ol{a} + \ol{b}) + \ol{c}$ and $\ol{a} \cdot (\ol{b} \cdot \ol{c}) = (\ol{a} \cdot \ol{b}) \cdot \ol{c}$. 
+      \item $\ol{0}$ and $\ol{1}$ are the additive and multiplicative identities respectively, i.e. $\ol{0} + \ol{a} = \ol{a} = \ol{a} + \ol{0}$ and $\ol{1} \cdot \ol{a} = \ol{a} = \ol{a} \cdot \ol{1}$. 
+      \item $\ol{a}$ has an additive inverse: there exists a $\ol{b} \in \ZZ/n\ZZ$, $\ol{b} := \ol{-a}$, such that $\ol{a} + \ol{b} = \ol{0} = \ol{b} + \ol{a}$.
+      \item $+$ is commutative: $\ol{a} + \ol{b} = \ol{b} + \ol{a}$. 
+      \item $\cdot$ is commutative: $\ol{a} \cdot \ol{b} = \ol{b} \cdot \ol{a}$. 
+      \item Distributivity: $\ol{a} \cdot (\ol{b} + \ol{c}) = \ol{a} \cdot \ol{b} + \ol{a} \cdot {c}$ and $(\ol{b} + \ol{c}) \cdot \ol{a} = \ol{b} \cdot \ol{a} + \ol{c} \cdot \ol{a}$. 
+   \end{enumerate}
+\end{thmbox}
+\begin{proof}
+   The proof of properties (1)-(6) will be given once we have defined commutative rings in Part IV. We will only prove that $+$ and $\cdot$ are well defined. For $+$, suppose $\ol{a_0} = \ol{a_1}$ and $\ol{b_0} = \ol{b_1}$. We want to show that $\ol{a_0 + b_0} = \ol{a_1 + b_1}$. Indeed, we have that 
+   \[ (a_0 + b_0) - (a_1 + b_1) = (a_0 - a_1) + (b_0 - b_1) \]
+   and both sides are divisible by $n$ since $n \mid (a_0 - a_1)$ and $n \mid (b_0 - b_1)$, whence $a_0 + b_0 \equiv_n a_1 + b_1$, i.e. $\ol{a_0 + b_0} = \ol{a_1 + b_1}$. For $\cdot$, suppose $\ol{a_0} = \ol{a_1}$ and $\ol{b_0} = \ol{b_1}$, we show $\ol{a_0b_0} = \ol{a_1b_1}$. We have
+   \[ a_0b_0 - a_1b_1 = a_0b_0 - a_0b_1 + a_0b_1 - a_1b_1 = a_0(b_0 - b_1) + (a_0 - a_1)b_1 \]
+   and is divisible by $n$ since $n \mid (a_0 - a_1)$ and $n \mid (b_0 - b_1)$, whence $a_0b_0 \equiv_n a_1b_1$, i.e. $\ol{a_0b_0} = \ol{a_1b_1}$. 
+\end{proof}

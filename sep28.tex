@@ -1,0 +1,67 @@
+\begin{propbox}
+   Let $n \geq 2$ be a natural number and $\ol{a} \in \ZZ/n\ZZ$, $\ol{a} \neq \ol{0}$. $\ol{a}$ is not a zero divisor in $\ZZ/n\ZZ$ if and only if $\gcd(a,n) = 1$. 
+\end{propbox}
+\begin{proof}
+   For the forwards direction we prove the contrapositive. Suppose $d := \gcd(a,n) > 1$. Then $a = da_0$ and $n = dn_0$ for some $a_0$, $n_0 \in \NN^+$. We have $an_0 = a_0dn_0 = a_0n \equiv 0 \pmod{n}$ while $1 \leq n_0 < n$ since $d > 1$, so $n_0 \not\equiv 0 \pmod{n}$, so $\ol{a}$ is a zero divisor. Conversely, suppose $\gcd(a,n) = 1$ and that $a \cdot b \equiv 0 \pmod{n}$. Since $n \mid (a-b)$ and $\gcd(a,n) = 1$, we have that $n \mid b$, so $b \equiv 0 \pmod{n}$. Thus $\ol{a}$ cannot be a zero divisor.
+\end{proof}
+
+We therefore have the following theorem:
+
+\begin{thmbox}
+   Let $n \geq 2$ be a natural number and $\ol{a} \in \ZZ/n\ZZ$, $\ol{a} \neq \ol{0}$. The following statements are equivalent:
+   \begin{enumerate}
+      \item $\ol{a}$ is invertible in $\ZZ/n\ZZ$.
+      \item $\ol{a}$ is not a zero divisor in $\ZZ/n\ZZ$.
+      \item $a$ and $n$ are coprime, i.e. $\gcd(a,n) = 1$. 
+   \end{enumerate}
+\end{thmbox}
+\begin{proof}
+   Follows immediately from Proposition 8.3.11 and Proposition 8.3.12. 
+\end{proof}
+
+\begin{defbox}
+   A commutative ring where all nonzero elements are invertible is called a \textbf{field}.
+\end{defbox}
+
+\begin{example}
+   The following rings are all fields:
+   \begin{enumerate}
+      \item $\QQ$, $\RR$ and $\CC$ are fields.
+   \item $ZZ/7\ZZ$ is a field, but $\ZZ/6\ZZ$ is not a field since $\ol{2}$ is not invertible.
+   \end{enumerate}
+\end{example}
+
+The second example leads to an important corollary:
+
+\begin{corrbox}
+   Let $n \geq 2$ be a natural number. $\ZZ/n\ZZ$ is a field if and only if $n$ is a prime number.
+\end{corrbox}
+\begin{proof}
+   For the forwards direction, suppose by contrapositive that $n$ is not prime, i.e. $n = ab$ for $a$, $b \in \NN^+$. Then $\ol{a} \neq \ol{0}$ and $\ol{b} \neq \ol{0}$, but $\ol{a}\cdot\ol{b} = \ol{ab} = \ol{n} = \ol{0}$. Since $\ZZ/n\ZZ$ has zero divisors, there exists elements that are not invertible by Theorem 9.X.X, hence $\ZZ/n\ZZ$ is not a field by definiton. Conversely, suppose $n$ is prime and let $\ol{a} \neq \ol{a}$. We have that $n \nmid a$ since $n$ is prime, which implies $gcd(a,n) = 1$. By Theorem 8.3.13, $\ol{a}$ must be invertible. Since $\ol{a}$ was arbitrary, $\ZZ/n\ZZ$ is a field.
+\end{proof}
+
+\section{Applications of Modular Arithmetic}
+
+\subsection{Fermat's Little Theorem}
+
+The following theorem, not to be confused with Fermat's Last Theorem, is extraordinarily useful when trying to compute the modulus of very large numbers.
+
+\begin{thmbox}[Fermat's Little Theorem]
+   Let $p \geq 2$ be a prime number and $\ol{a} \in \ZZ/p\ZZ$, $\ol{a} \neq \ol{0}$. Then 
+   \[ a^{p-1} \equiv 1 \pmod{p} \]
+   i.e. $\ol{a^{-1}} = \ol{(a^{p-2})}$. 
+\end{thmbox}
+\begin{proof}
+   Define $(\modulo)^* := (\modulo) \setminus \{\ol{0}\}$. Observe that the Invertibility of $\ol{a}$ implies that the function $f \colon (\modulo)^* \to (\modulo)^*$ given by $\ol{x} \mapsto \ol{a} \cdot \ol{x}$ is a bijection. Indeed, the function $\ol{y} \mapsto \ol{a^{-1}} \cdot \ol{y}$ is the inverse of $f$. Thus $(\modulo)^* = f((\modulo)^*)$, i.e. 
+   \[ \{\ol{1}, \ol{2}, \dots, \ol{p-1} \} = \{\ol{a}\cdot\ol{1}, \ol{a} \cdot \ol{2}, \dots, \ol{a}\cdot\ol{(p-1)} \}.\]
+   If we take the product of both sides, we obtain
+   \[ \ol{1} \cdot \ol{2} \dots \ol{(p-1)} = (\ol{a} \cdot \ol{1}) \cdot (\ol{a} \cdot \ol{2}) \cdot \dots \cdot (\ol{a} \cdot \ol{(p-1)}.\]
+   Therefore, $\ol{1} \cdot \ol{2} \cdot \dots \cdot \ol{(p-1)} = \ol{a^{p-1}} \cdot \ol{1} \cdot \ol{2} \cdot \dots \cdot \ol{(p-1)}$. Since $\ol{1} \cdot \ol{2} \cdot \dots \cdot \ol{(p-1)}$ is invertible, multiplying both sides by its inverse yields the desired result.
+\end{proof}
+
+\begin{example}
+   Calculate $3^{1000} \pmod{7}$. 
+\end{example}
+\begin{solution}
+   We can write $1000 = (7-1)\cdot q + 4$, where $q \in \NN$. Since $3^{1000} = (3^{7-1})^q \cdot 3^4$, by Fermat's Little Theorem we have that $3^{1000} \equiv 3^4 \pmod{7}$, so $3^{1000} \equiv 4 \pmod{7}$. 
+\end{solution}

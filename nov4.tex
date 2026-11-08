@@ -1,0 +1,40 @@
+\section{November 4th Material}
+
+\subsection{Another Application of Group Actions}
+
+This application is about the order of elements in a group. We first need the following simple lemma:
+
+\begin{lemmabox}
+    For a group $G$ and $g \in G$, if $g^n = e_G$ for $n \neq 0$, then $|G| \mid n$. 
+\end{lemmabox}
+\begin{proof}
+    Let $k := |G|$ and $n = km + r$ where $0 \leq r \leq k - 1$ and $m \in \ZZ$. Observe 
+    \[ e_G = g^n = g^{km+r} = g^{km}\cdot g^r = (g^k)^m \cdot g^r = e_G \cdot g^r = g^r \]
+    So $r = 0$, since otherwise $r < k$ contradicts $k$ being the smallest positive power giving the identity.
+\end{proof}
+
+Given a finite group $G$, Lagrange's Theorem states that to have an element of order $k$, $k$ must divide $|G|$. Is this a sufficient condition, i.e. if $k \mid |G|$, does there have to be an element $g \in G$ of order $k$? The answer is no. Consider the following example:
+
+\begin{example}
+    Let $G := \ZZ/2\ZZ \times \ZZ/2\ZZ$, every nonidentity element has order $2$, but $|G| = 4$, so $4 \mid |G|$, but there is no element of order $4$ in the group.
+\end{example}
+
+\begin{thmbox}[Cauchy's Theorem]
+    Let $G$ be a finite group and $p$ a prime number. If $p \mid |G|$, then there exists a $g \in G$, such that $g$ is of order $p$.
+\end{thmbox}
+\begin{proof}
+    It suffices to show that there exists an $e_G \neq g \in G$ with $g^p = e_G$, because then $\text{ord}(g) > 1$ and $\text{ord}(g) \mid p$  by the lemma above, so $\text{ord}(g) = p$. Consider the set 
+    \[ X := \{(g_0, g_1, \dots, g_{p-1}) \in G^p : g_0g_1\dots g_{p-1} = e_G\} \]
+    Let $\ZZ/p\ZZ$ act on $X$ by shifting the indices, e.g. $\ol{1} \star (g_0, g_1, \dots, g_{p-1}) := (g_1,\dots, g_{p-1}, g_0)$ and $\ol{2} \star (g_0, g_1, \dots, g_{p-1}) := (g_2,g_3, \dots, g_{p-1}, g_0, g_1)$. Observe that by setting $n := |G|$, $|X| = n^{p-1}$ and $X$ is partitioned into disjoint orbits of size $|\ZZ/p\ZZ| //|\text{some subgroup}|$, so the size of each orbit divides $p$. This implies that the size of each orbit is either $1$ or $p$. Let $n_1$ and $n_p$ denote the number of $1$ and $p$ element orbits respectively, so $n^{p-1} = |X| = n_p \cdot p + n_1 + 1$, so $n_1 = (n^{p-1} - n_p \cdot p) \mid p$. But $n_1 \geq 1$ because $(e_G, \dots, e_G) \in X$ has an orbit of size $1$, so $n_1 \geq p \geq 2$ since $p \mid n$. Thus there exists a nonidentity $(g_0, g_1, \dots, g_{n-1}) \in X$ fixed by $\ZZ/p\ZZ$, hence $(g_0, g_1, \dots, g_{n-1}) = (g, \dots, g)$ for $g \neq e_G$, whence $g^p = g\cdots g = e_G$. 
+\end{proof}
+
+We will now build another counting device for group actions.
+
+\begin{thmbox}[Burnside's Lemma]
+    Let $G$ on $X$ be a group action of a finite group $G$ on a finite set $X$. For each $g \in G$ define:
+    \[ \text{Fix}(g) := \{x \in X : g \star x = x\} \]
+    Then $|X/G| = |G|^{-1}\sum_{g \in G}\text{Fix}(g)$. 
+\end{thmbox}
+\begin{proof}
+    Next lecture. 
+\end{proof}
