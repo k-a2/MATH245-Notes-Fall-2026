@@ -1,0 +1,75 @@
+\newpage 
+\section{November 9 Notes}
+
+\subsection{Quotient Groups}
+
+Let $G$ be a group and $A$, $B \subseteq G$. We denote 
+    \[ AB := \{ab : a \in A, b \in B \}. \]
+Also, for $g \in G$, denote $gA := \{g\}A = \{ga : a \in A\}$, and similarly, define $Ag := \{ag : a \in A\}$. 
+
+\begin{example}
+    If $H \leq G$, then $HH = H$. Indeed, since $H$ is closed under its group operation, $HH \subseteq H$ and for the converse, observe that $H = e_GH \subseteq HH$. 
+\end{example}
+
+\begin{example}
+    If $H \leq G$ and $g \in G$, we have, by definition, $gH = Hg$. 
+\end{example}
+
+\begin{propbox}
+    Let $G$ be a group, $H \triangleleft G$ a normal subgroup of $G$. Then the quotient $G/H = \{gH : g \in G\}$ is a group under multiplication of cosets as sets, i.e. $(aH)(bH) = aHbH$. Under the normality of $H$:
+    \[ (aH)(bH) := (ab)H \]
+    i.e $(aH)(bH)$ is a binary operation on $G/H$. 
+\end{propbox}
+
+\begin{proof}
+    Firstly, for $a, b \in G$, note that by associativity of multiplication and the above example,
+    \[ (aH)(bH) = a(Hb)H = (ab)(HH) = H. \]
+    Associativity of set/coset multiplication follows from the associativity of group operations of $G$. The identity coset $e_gH = H$ is the identity of this operation, indeed for all $g \in G$, we have by normality that
+    \[ (gH)H = g(HH) = gH = g(HH) = H(gH). \]
+    Lastly the inverse of $gH$ is the coset $g^{-1}H$, since
+    \[ (gH)(g^{-1}H) = (gg^{-1})H = e_GH = H. \qedhere \] 
+\end{proof}
+
+\begin{example}
+    Since $(\ZZ, +)$ is abelian, every subgroup is normal, hence the subgroup $n\ZZ$ is normal for any $n \in N^+$, and $\modulo$ is the $\pmod{n}$ group we previously defined. Indeed, the elements of $\modulo$ are cosets of the term $\ol{k} := [k]_{\sim_n} = k + n\ZZ$ and $\ol{k_0} + \ol{k_1} = (k_0 + n\ZZ) + (k_1 + n\ZZ) = (k_0 + k_1) + n\ZZ$. 
+\end{example}
+
+\begin{propbox}
+    For a group $G$ and $H \triangleleft  G$, the quotient map $\pi_H : G \to G/H$ given by $g \mapsto gH$ is a surjective group homeomorphism. 
+\end{propbox}
+\begin{proof}
+    For $a$, $b \in G$, $\pi_H(a,b) = (ab)H = (aH)(bH)$ by the above proposition which in turn is equal to $\pi_H(a)\pi_H(b)$, so $\pi_H$ is a homeomorphism, which is surjective because quotient maps of equivalence relations are always surjective.
+\end{proof}
+
+\begin{thmbox}[First Isomorphism Theorem]
+    Let $f \colon G \to H$ be a group homeomorphism and set $K = \ker(f)$. Then there exists a unique isomorphism $\overline{f} \colon G/K \to \text{im}(f)$, namely $gK \mapsto f(g)$, such that the following diagram commutes:
+    \[
+    \begin{tikzcd}
+        G \arrow[rr, "f"] \arrow[dr, "\pi_K"'] & & H \\
+        & G/K \arrow[ur, "\bar{f}"'] &
+    \end{tikzcd}
+    \]
+\end{thmbox}
+
+\begin{proof}
+    The uniqueness of $\bar{f}$ is forced by $f = \bar{f} \circ \pi_K$, i.e., for all $g \in G$,
+    \[
+    f(g) = \bar{f}\big(\pi_K(g)\big) = \bar{f}(gK),
+    \]
+    so $\bar{f}(gK)$ must be $f(g)$. It remains to show that $\bar{f}$ is a well-defined injective homeomorphism. Firstly, to show well-definedness, let $aK = bK$. We need to show that $\bar{f}(aK) = \bar{f}(bK)$, i.e., $f(a) = f(b)$. But $aK = bK$ means $b^{-1}a \in K$, hence $f(b^{-1}a) = e_H$, so
+    \[
+    e_H = f(b^{-1}a) = f(b)^{-1} f(a),
+    \]
+    hence $f(a) = f(b)$. Secondly, to show that $\ol{f}$ is a homeomorphism:
+    \[
+    \bar{f}(aK)\,\bar{f}(bK) = \bar{f}\big((ab)K\big) = \bar{f}(ab) = f(ab) = f(a)\,f(b) = \bar{f}(aK)\,\bar{f}(bK).
+    \]
+    
+    Lastly, to show injectivity, if $\bar{f}(aK) = \bar{f}(bK)$, then $f(a) = f(b)$, so $f(b^{-1}a) = f(b)^{-1} f(a) = e_H$. Hence $b^{-1}a \in K$, so $aK = bK$.
+\end{proof}
+
+\begin{example}
+    Let $\text{GL}_n(\RR)$ denote the group of invertible $n \times n$ real matrices under multiplication. Then the determinant $\det \text{GL}_n(\RR) \to \RR^\times$ is a homeomorphism to the group $(\RR^\times, \cdot)$, since $\det(AB) = \det(A)\det(B)$ and this is surjective. Then, the kernel of $\det$ is denoted by 
+    \[ \text{SL}_n(\RR) := \ker(\det) = \{ A \in \text{GL}_n(\RR) : \det(A) = 1 \} \]
+    By the first isomorphism theorem, $\text{GL}_n(\RR)/\text{SL}_n(\RR) \cong \RR^\times$. 
+\end{example}

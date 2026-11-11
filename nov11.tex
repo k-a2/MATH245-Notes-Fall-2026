@@ -1,0 +1,49 @@
+\section{November 11: Rings, Revisited}
+
+\begin{defbox}
+    A \bold{ring} is a structure $(R, +, \cdot)$, where $R$ is a set and $+$ and $\cdot$ are binary relations on $R$ such that:
+    \begin{enumerate}
+        \item $(R, +)$ is an abelian group, and we denote its identity by $0$;
+        \item $\cdot$ is associative and has a two-sided identity, denoted $1$; and
+        \item $\cdot$ distributes over $+$ from both sides, i.e. for all $a$, $b$, $c \in R$,
+        \[ a \cdot (b + c) = a \cdot b + a \cdot c, (a + b) \cdot c = a \cdot c + b \cdot c. \] 
+    \end{enumerate}
+    Furthermore, we say a ring is \bold{commutative} if $\cdot$ is commutative, i.e. for all $a$, $b \in R$, $a \cdot b = b \cdot a$.
+\end{defbox}
+
+Although there is a unique, one element ring where $0 = 1$, we will not consider this ring (call it \textit{trivial}) and in a nontrivial ring, we have $0 \neq 1$.
+
+\begin{defbox}
+    An element $u \in R$ is called a \bold{unit} if it is $\cdot$-invertible, i.e. there exists $v \in R$ such that $uv = 1 = vu$. In this case, $v$ is unique and we call it $u^{-1}$. We denote the set of units by $R^\times$. 
+\end{defbox}
+
+\begin{defbox}
+    An \bold{interval domain} is a nontrivial commutative ring without zero-divisors, i.e. for all $a$, $b \in R$, $a \cdot b = 0 \implies a = 0$ or $b = 0$. A \bold{division ring} is a ring where each nonzero element is a unit, i.e. $R^\times = R \setminus \{0\}$. A \bold{field} is a nontrivial commutative division ring. 
+\end{defbox}
+
+\begin{remark}
+    By definition, every field is an integral domain. 
+\end{remark}
+
+\begin{example}
+    Let $R$ be a ring. The ring of $n \times n$ matrices, denoted $M_n(R)$, is the set of all finite sequences of elements of $R$ indexed by pairs $(i,j)$ for $1 \leq i, j \leq n$ and we write them as:
+    \[ \begin{pmatrix}
+        a_{11} & a_{12} & \dots & a_{1n}\\
+        a_{21} & a_{22} & \dots & a_{2n}\\
+        \vdots & \vdots & \ddots & \vdots \\
+        a_{n1} & a_{n2} & \dots & a_{nn}\\
+    \end{pmatrix} \] 
+    Where matrix addition is done coordinate-wise, and matrix multiplication is define by the dot product on each cell (these are the same matrix operations we studied in MATH133). 
+
+    For our example, we will typically consider rings of matrices over a field $F$. In this case, there is a nice theory (called linear algebra) which characterises the invertible matrices (units of $M_n(F)$):
+    \[ M_n(F)^\times = \text{GL}_n(F) := \{ A \in M_n(F) : \det(A) \neq 0\} \]
+    Note that $M_n(F)$ is never commutative for $n \geq 2$. 
+\end{example}
+
+\begin{example}
+    Let $R$ be a ring. A \textit{formal polynomial over} $R$ is an expression of the form 
+    \[ f = a_0 + a_1x + \dots a_nx^n \]
+    where $a_i \in R$, $i \in [0, n]$ and $x$ is indeterminate. We say two polynomials are equal if the coefficients $a_0 \dots a_n$ are equal, treating the missing coefficients as zeros. The set of all polynomials over $R$ is denoted by $R[x]$ and it is a ring under $+$ and $\cdot$ operations. 
+
+    The \textit{zero polynomial} is the one with all coefficients zero and we denote it b $0$, and the multiplicative identity is $f = 1$. 
+\end{example}
