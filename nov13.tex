@@ -1,0 +1,63 @@
+\section{November 13 Notes}
+
+\begin{propbox}
+    Let $R$ be a commutative ring and $f$, $g \in R[x]$. 
+    \begin{enumerate}
+        \item If $R$ is an integral domain then so is $R[x]$. In fact., for any $f$, $g \in R[x]$,
+            \[ \deg(fg) = \deg(f) + \deg(g)\]
+        \item If $f$, $g \in R[x]$ and $g$ is monic, then $\deg(fg) = \deg(f) + \deg(g)$.
+    \end{enumerate}
+\end{propbox}
+
+\begin{proof}
+    Suppose $f$ and $g$ are nonzero polynomials in $R[x]$. Let $f = a_0 + \dots + a_n^n$ and $g = b_0 + \dots + b_lx^l$ where $k = \deg(f)$ and $l = \deg(g)$ i.e. $a_n$, $b_l \neq 0$. Then 
+    \[ fg = a_0b_0 + (-h-) + a_kb_lx^{k+l} \] 
+    where $h$ is a polynomial with $\deg(h) < k + l$. Since $R$ is an integral domain, $a_kb_l \neq 0$. So $\deg(fg) + k + l = \deg(f) + \deg(g)$. 
+
+    The proof of 2. is the same, except $b_l = 1$, so $a_kb_l = a_k \neq 0$. 
+\end{proof}
+
+\begin{example}
+    Consider $R = \ZZ/6\ZZ$, which has zero divisors $\ol{2}$ and $\ol{3}$, so $\deg(\ol{2}x+\ol{1}) = 1$ and $\deg(\ol{3}x + \ol{1}) = \ol{1}$, but $(\ol{3}x + \ol{1})(\ol{2}x + \ol{1}) = \ol{6}x^2 + \ol{5}x + \ol{1} = \ol{5}x + \ol{1}$, hence has degree 1.
+\end{example}
+
+We now discuss how to divide one polynomial by another with a remainder. 
+
+For instance, can we divide $f := x^3 + 2x + 3$ by $g := x - 1$ inside $\ZZ[x]$? In other words, does there exists $q$, $r \in \ZZ[x]$ such that
+    \[ f = qg + r \] 
+and $\deg(r) < \deg(g) = 1$? By doing long division as seen in high school, we find 
+    \[ f = (x^2 + x + 3)g + 3\]
+What if we wanted to divide $f$ by $2x - 1$? Over $\ZZ$, we cannot because the leading coefficient of $f$ is 1 while the leading coefficient of $q$ is $c$, thus $1 = 2c$ which has no solution in $\ZZ$. However, the system does have a solution over $\QQ$. 
+
+\begin{thmbox}[Division of polynomials with remainder]
+    Let $R$ be a commutative ring and let $g \in R[x]$ be a monic polynomial. Then, for every $f \in R[x]$, there exist unique $q$, $r \in R[x]$ such that $f = qg + r$ and $\deg(r) < \deg(g)$. 
+\end{thmbox}
+
+\begin{proof}
+    We prove by complete induction on $\deg(f)$. If $\deg(f) < \deg(g)$, then $q = 0$ an $r = f$ works. If $k := \deg(f) \geq \deg(g) =: d$, then, letting $a_k$ be the leading coefficient of $f$, we get that $f - a_kx^{k-d}g = a_kx^k + \tilde{f} - a_kx^{k-d}$. So we have that 
+    \[ (x^d + \tilde{g}) = a_kx^k + \tilde{f} - a_kx^k + x^{k-d}\tilde{g} = \tilde{f} + x^{k-d}\tilde{g} \]
+    where $\deg(\tilde{f}) < k$ and $\deg(x^{k-d}\tilde{g}) < k - d + d = k$, hence by ionduction, we have that there exists $\tilde{q}$, $\tilde{r}$ such that 
+    \[ f - a_kx^{k-d}g = \tilde{q}g + \tilde{r} \] 
+    where $\deg(\tilde{r}) < \deg(g) =: d$. 
+
+    To show uniqueness, suppose that for some $q_0$, $q_1$, $r_0$, $r_1 \in R[x]$, we have 
+    \[ f = q_ig + r_i\]
+    where $\deg(r_i) < \deg(g)$. Then $q_0gr+r_0 = q_1g + r_1$, so $(q_0 - q_1)g = r_1 - r_0$. If $q_0 - q_1 \neq 0$, we have that $g$ is monic, so by the proposition, $\deg(r_1 - r_0) = \deg((q_0 - q_1)g) \geq = 0 + \deg(g) = \deg(g)$, contradicting that $\deg(r_1 - r_0) < \deg(g)$, so $q_0 = q_1$ hence $r_0 = r_1$. 
+\end{proof}
+
+\begin{corrbox}
+    Let $F$ be a field and $g \in F[x]$ nonzero. Then for each $f \in F[x]$, there exist unique $q$, $r \in F[x]$ such that $f = qg + r$ and $\deg(r) < \deg(g)$. 
+\end{corrbox}
+
+\begin{proof}
+    Follows from the moni cstatement applied to $\tilde{g} := b^{-1}g$ where $b$ is the leading coefficient of $g$. Indeed, if $f = \tilde{q}\tilde{g} + r$, with $\deg(r) < \deg(g)$, then 
+    \[ f = \tilde{q} \cdot b^{-1}g + r = (b^{-1}\tilde{q})g + r \]
+    and the uniqueness follows as per the theorem above.
+\end{proof}
+
+\begin{defbox}
+    For rings $R$, $S$, a \bold{ring homeomorphism} is a function $f \colon R \to S$ preserving $+$, $\cdot$, and $1$, i.e $f(r_0 + r_1) = f(r_0) + f(r_1)$, $f(r_0r_1) = f(r_0)f(r_1)$, and $f(1) = 1$. 
+
+    The \bold{kernel} of $f$ is $\ker(f) := \{r \in R : f(r) = 0\}$ and the \bold{image} of $f$ is $\Im(f) := f(S)$. 
+\end{defbox}
+$\Im(f)$ is a subring of $S$ but $\ker(f)$ is not because $S$ is nontrivial. 
